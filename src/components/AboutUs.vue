@@ -1,14 +1,16 @@
 <script setup ></script>
 <template>
     <div class="flex items-center justify-start p-8">
-         <div class="w-[420px] h-[380px] bg-slate-500"></div>
+         <div class="w-[420px] h-[380px] ">
+            <img src="../assets/abt.jpg" class="w-full h-full object-cover"/>
+         </div>
 
          <div class="flex flex-col items-start justify-start w-[60%] ml-32">
-            <h3 class="font-bold text-red-700 text-base">ABOUT US</h3>
-            <h1 class="font-bold my-6 text-slate-700 text-5xl">We are Taking Small Steps to Make Earth Better Planet</h1>
+            <h3 class="font-bold text-red-700 text-base">À PROPOS DE NOUS</h3>
+            <h1 class="font-bold my-6 text-slate-700 text-5xl">Nous prenons de petites mesures pour rendre la Terre meilleure</h1>
             <hr class="bg-red-700 w-[10%] h-2 my-3"/>
-            <p class="my-4 font-normal text-base text-slate-600">We welcome you with the great joy of ECC chuch, We are here to share th great news of Jesus Christ to all that will listen.</p>
-            <p>The name of the Lord is a strong tower; The nighteos mun into it and one safe.</p>
+            <p class="my-4 font-normal text-base text-slate-600">Nous vous accueillons avec la grande joie de l'église ECC, Nous sommes ici pour partager la grande nouvelle de Jésus-Christ à tous ceux qui écouteront.</p>
+            <p>Le nom du Seigneur est une tour forte ; Les nighteos mun dedans et un coffre-fort.</p>
 
             <div class="py-1 my-3 w-full flex items-center justify-start">
                 <div class="flex flex-col w-[50%] p-4">
@@ -18,8 +20,8 @@
 </svg>
 
                     </span>
-                    <h3 class="my-2 font-semibold text-xl">Place Of Heaven</h3>
-                    <p class="w-[80%] font-normal text-base text-slate-600">In ECC you will feel divinity, piety, goodness, faith or right beliefs.</p>
+                    <h3 class="my-2 font-semibold text-xl">Lieu de paradis</h3>
+                    <p class="w-[80%] font-normal text-base text-slate-600">Dans ECC, vous ressentirez la divinité, la piété, la bonté, la foi ou les bonnes croyances.</p>
                 </div>
 
                 <div class="flex flex-col w-[50%] p-4">
@@ -30,12 +32,12 @@
 
 
                     </span>
-                    <h3 class="my-2 font-semibold text-xl">Study Bible</h3>
-                    <p class="w-[80%] font-normal text-base text-slate-600">Learn the bible ehance your wisdom, give you boldness about your faith.</p>
+                    <h3 class="my-2 font-semibold text-xl">Bible d'étude</h3>
+                    <p class="w-[80%] font-normal text-base text-slate-600">Apprenez la Bible, améliorez votre sagesse, donnez-vous l'audace de votre foi.</p>
                 </div>
             </div>
 
-            <button class="p-3 bg-red-700 text-white rounded-sm my-3">Learn more</button>
+            <button class="p-3 bg-red-700 text-white rounded-sm my-3">Apprendre encore plus</button>
          </div>
     </div>
 </template>
