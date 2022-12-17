@@ -1,6 +1,6 @@
 <script setup ></script>
 <template>
-    <div class="relative w-[98%] h-[80vh] flex flex-col items-center justify-center  bg-[url('../assets/bdt.jpg')] bg-cover bg-no-repeat mx-auto my-8 p-12 text-center">
+    <div class="relative w-full md:w-[98%] md:h-[80vh] flex flex-col items-center justify-center  bg-[url('../assets/bdt.jpg')] bg-cover bg-no-repeat mx-auto my-8 p-12 text-center">
         <div class="absolute inset-0 bg-zinc-500/30 w-full h-full"></div>
         <div class="relative w-full h-full flex flex-col items-center justify-center">
             <span class="flex items-center justify-center my-2 w-24 h-24 bg-red-700/40  rounded-full">
@@ -12,7 +12,7 @@
                     </span>
         </span>
 
-        <h1 class="my-4 font-bold text-white text-5xl w-[98%]">"Priez ! Et écoutez Dieu ! Vous pouvez le faire seul, mais trouvez quelqu'un pour le faire avec vous"</h1>
+        <h1 class="my-4 font-bold text-white text-4xl md:text-5xl w-full md:w-[98%]">"Priez ! Et écoutez Dieu ! Vous pouvez le faire seul, mais trouvez quelqu'un pour le faire avec vous"</h1>
         <h3 class="my-6 font-medium text-white text-xl">Real Story Cross Journey from Anna Hampton</h3>
         <button class="my-4 p-3  border-red-700 border-2 text-white">Faire un Don en Ligne</button>
         </div>

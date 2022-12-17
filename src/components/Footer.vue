@@ -1,9 +1,9 @@
 <script setup></script>
 <template>
-    <div class="w-full h-[68vh] mt-12">
-        <div class="w-full h-[85%] p-16 bg-slate-800 flex items-start justify-center">
+    <div class="w-full md:h-[68vh] mt-12">
+        <div class="w-full md:h-[85%] p-16 bg-slate-800 flex flex-col md:flex-row items-start justify-center">
            
-            <div class="flex flex-col w-[calc(100%/4)]">
+            <div class="flex flex-col w-full my-8 md:my-0 md:w-[calc(100%/4)]">
                 <h3 class="font-bold text-2xl text-white">À propos d'Ecc</h3>
                 <p class="text-base text-slate-200 my-4">Ecc Church Wordpress Theme est conçu par des professionnels pour les églises à but non lucratif, les églises modernes, les groupes de prière, les chrétiens, les organisations caritatives, les organisations à but non lucratif. Saisissez-le bientôt!</p>
                 <div class="flex items-center justify-start my-3">
@@ -15,7 +15,7 @@
                 </div>
             </div>
 
-            <div class="flex flex-col w-[calc(100%/4)]">
+            <div class="flex flex-col w-full my-8 md:my-0 md:w-[calc(100%/4)]">
                 <h3 class="font-bold text-2xl text-white mb-2">Liens rapides</h3>
                 <span class="my-2.5 flex items-center justify-start">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-red-700 mr-2 w-6 h-6">
@@ -52,7 +52,7 @@
                 </span>
             </div>
 
-            <div class="flex flex-col w-[calc(100%/4)]">
+            <div class="flex flex-col w-full my-8 md:my-0 md:w-[calc(100%/4)]">
                 <h3 class="font-bold text-2xl text-white mb-2">Dernières nouvelles</h3>
 
                 <div class="flex items-center justify-center my-3 h-[80%]">
@@ -88,7 +88,7 @@
                 </div>
             </div>
 
-            <div class="flex flex-col w-[calc(100%/4)]">
+            <div class="flex flex-col w-full my-8 md:my-0 md:w-[calc(100%/4)]">
                 <h3 class="font-bold text-2xl text-white mb-2">Bulletin</h3>
                 <p class="text-base text-slate-200 my-4">Ecc Church Wordpress Theme est conçu par des professionnels pour les églises à but non lucratif, les églises modernes, les groupes de prière, les chrétiens, les organisations caritatives, les organisations à but non lucratif. Saisissez-le bientôt!</p>
                 <div class="flex items-center justify-start  w-[280px] my-2">
@@ -97,7 +97,7 @@
                 </div>
             </div>
         </div>
-        <div class="w-full h-[15%] bg-slate-900 flex items-center justify-center font-bold text-white">
+        <div class="w-full h-12 md:h-[15%] bg-slate-900 flex items-center justify-center font-bold text-white">
             Copywright 2022 - GNO Solutions
         </div>
     </div>

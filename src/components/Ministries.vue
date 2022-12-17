@@ -5,7 +5,7 @@
             <h1 class="font-bold my-2 text-slate-700 text-3xl">Nos ministères</h1>
             <hr class="bg-red-700 w-[6%] h-1 my-2"/>
 
-            <div class="flex items-center justify-center my-16">
+            <div class="flex flex-col md:flex-row items-center justify-center my-16">
                 <div class="w-[328px] h-[448px]  rounded-lg shadow-sm ">
                     <div class="w-[100%] h-[50%] overflow-clip rounded-t-lg">
                         <img src="../assets/met.jpg" class="w-full h-full object-cover "/>
@@ -18,7 +18,7 @@
                     </div>
                 </div>
 
-                <div class="mx-8 w-[328px] h-[448px]  rounded-lg shadow-sm ">
+                <div class="my-8 md:mx-8 w-[328px] h-[448px]  rounded-lg shadow-sm ">
                     <div class="w-[100%] h-[50%] overflow-clip rounded-t-lg">
                         <img src="../assets/mft.jpg" class="w-full h-full object-cover "/>
                     </div>

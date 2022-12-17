@@ -5,7 +5,7 @@
             <h1 class="font-bold my-2 text-slate-700 text-3xl">Derniers articles</h1>
             <hr class="bg-red-700 w-[6%] h-1 my-2"/>
 
-            <div class="flex items-center justify-center my-16">
+            <div class="flex flex-col md:flex-row items-center justify-center my-16">
                 <div class="w-[328px] h-[408px]  rounded-lg shadow-sm ">
                     <div class="w-[100%] h-[65%] overflow-clip">
                         <img src="../assets/bc1.jpg" class="w-full h-full object-cover "/>
@@ -57,7 +57,7 @@
 
                 
             </div>
-            <div class="flex items-center justify-evenly w-[6%] mt-4">
+            <div class="flex items-center justify-evenly w-[24%] md:w-[6%]  md:mt-4">
             <span class="w-4 h-4 rounded-full bg-red-700"></span>
             <span class="w-4 h-4 rounded-full bg-slate-300"></span>
             

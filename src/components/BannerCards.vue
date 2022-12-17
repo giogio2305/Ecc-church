@@ -1,10 +1,10 @@
 <script setup></script>
 <template>
-    <div class="flex items-center justify-start w-full h-[100vh] bg-slate-50 p-1 mb-24">
+    <div class="md:flex flex-col md:flex-row items-center justify-start w-full md:h-[100vh] bg-slate-50 p-1 mb-3">
 
-            <div class="flex flex-col w-[24%] h-full">
+            <div class="flex flex-col w-[84%] md:w-[23%] h-full">
                 <div class="flex flex-col m-6">
-                    <div class="h-36 w-64 overflow-clip rounded-md">
+                    <div class="h-36 w-[88%] md:w-64 overflow-clip rounded-md">
                         <img src="../assets/flct.jpg" class="w-full h-full object-cover"/>
                     </div>
                     <h2 class="font-semibold text-2xl my-3">Le secret pour une spiritualité accomplie.</h2>
@@ -35,13 +35,13 @@
                 </div>
             </div>
 
-            <div class="relative flex items-center justify-center w-[52%] h-full">
+            <div class="relative flex items-center justify-center w-full md:w-[54%] h-full">
                 <div class="h-[96%] w-[96%] rounded-md overflow-clip">
                     <img src="../assets/mct.jpg" class="w-full h-full object-cover"/>
                 </div>
-                <div class=" absolute bottom-0 flex flex-col items-center justify-center w-[88%] min-h-[28%] p-6 rounded-t-md bg-white">
+                <div class=" absolute bottom-0 flex flex-col items-center justify-center w-[88%] min-h-[12%] md:min-h-[28%] p-6 rounded-t-md bg-white">
                     <div class="w-28 p-1.5 rounded-md bg-red-600 text-white text-center font-semibold mt-[-40px] my-4">La Foi</div>
-                    <h1 class="font-bold text-3xl text-zinc-800 text-center">Fragan expert Gan ce parfums aurait actrice.</h1>
+                    <h1 class="font-bold text-xl md:text-3xl text-zinc-800 text-center">Fragan expert Gan ce parfums aurait actrice.</h1>
                     <span class="flex my-4">
                         <h6 class="font-normal text-gray-500 text-base mr-4">Par John Leo</h6>
                         <h6 class="flex items-center font-normal text-gray-500 text-base">
@@ -50,14 +50,14 @@
                             </svg>
                             28 mars 20211</h6>
                     </span>
-                    <p class="text-center font-normal text-gray-500 text-md mx-16 my-3">
+                    <p class="text-center font-normal text-gray-500 text-base md:text-md md:mx-16 md:my-3">
                         Anthony Rotolo, professeur à l'université de Syracuse propose au cours Dr. Who, une aventure.
                     </p>
                 </div>
             </div>
-            <div class="flex flex-col w-[24%] h-full">
+            <div class="flex flex-col w-[84%] md:w-[23%] h-full">
                 <div class="flex flex-col m-6">
-                    <div class="h-36 w-64 overflow-clip rounded-md">
+                    <div class="h-36 w-[88%] md:w-64 overflow-clip rounded-md">
                         <img src="../assets/flct.jpg" class="w-full h-full object-cover"/>
                     </div>
                     <h2 class="font-semibold text-2xl my-3">Le secret pour une spiritualité accomplie.</h2>
@@ -73,7 +73,7 @@
 
 
                 <div class="flex flex-col m-6">
-                    <div class="h-36 w-64 overflow-clip rounded-md">
+                    <div class="h-36 w-[88%] md:w-64 overflow-clip rounded-md">
                         <img src="../assets/slct.jpg" class="w-full h-full object-cover"/>
                     </div>
                     <h2 class="font-semibold text-2xl my-3">La meilleure facon de lire les saintes écritures.</h2>
