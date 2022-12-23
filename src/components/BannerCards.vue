@@ -40,7 +40,7 @@
                     <img src="../assets/mct.jpg" class="w-full h-full object-cover"/>
                 </div>
                 <div class=" absolute bottom-0 flex flex-col items-center justify-center w-[88%] min-h-[12%] md:min-h-[28%] p-6 rounded-t-md bg-white">
-                    <div class="w-28 p-1.5 rounded-md bg-red-600 text-white text-center font-semibold mt-[-40px] my-4">La Foi</div>
+                    <div class="w-28 p-1.5 rounded-md bg-blue-500 text-white text-center font-semibold mt-[-40px] my-4">La Foi</div>
                     <h1 class="font-bold text-xl md:text-3xl text-zinc-800 text-center">Fragan expert Gan ce parfums aurait actrice.</h1>
                     <span class="flex my-4">
                         <h6 class="font-normal text-gray-500 text-base mr-4">Par John Leo</h6>

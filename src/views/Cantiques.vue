@@ -1,15 +1,16 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import SiteNavigation from '../components/SiteNavigation.vue';
+import Footer from '../components/Footer.vue';
 </script>
 
 <template>
+        <SiteNavigation/>
     <div class="flex flex-col min-h-screen bg-slate-100">
-      <SiteNavigation/>
       <div class="w-full h-[60vh] bg-[url('../assets/praise.jpg')] bg-cover bg-no-repeat bg-right flex flex-col items-start justify-end">
 
           <div class="flex flex-col items-start w-[52%] h-full p-6 my-4">
-          <h5 class="font-semibold text-red-500 text-md">Liste de Cantiques</h5>
+          <h5 class="font-semibold text-blue-500 text-md">Liste de Cantiques</h5>
         <h1 class="font-bold text-slate-100 text-4xl my-4">Découvrez plus de 400 cantiques, louanges et adorations, dans des langues différentes.</h1>
         </div>
 
@@ -42,5 +43,82 @@ import SiteNavigation from '../components/SiteNavigation.vue';
           <h5 class="font-semibold text-zinc-300 text-sm">A-Z</h5>
         </div>
       </div>
+
+      <div class="max-w-screen-xl  flex items-center flex-wrap pt-10 pb-12 px-6">
+        <h1 class="font-bold text-3xl text-black tracking-tight mb-16">Les plus écoutés</h1>
+        <div class="w-full grid grid-cols-2  sm:grid-cols-3 md:grid-cols-5 gap-6">
+
+          <div class="cursor-pointer w-auto h-auto block">
+            <div class="bg-slate-300 rounded-md w-[238px] h-[238px] shadow-sm"></div>
+            <p class="pt-4 font-semibold text-lg">Glory to the lord</p>
+            <p class="pt-1 text-grey-700">Pete Davidson</p>
+
+          </div>
+
+          <div class="cursor-pointer w-auto h-auto block">
+            <div class="bg-slate-300 rounded-md w-[238px] h-[238px] shadow-sm"></div>
+            <p class="pt-4 font-semibold text-lg">Glory to the lord</p>
+            <p class="pt-1 text-grey-700">Pete Davidson</p>
+
+          </div>
+
+          <div class="cursor-pointer w-auto h-auto block">
+            <div class="bg-slate-300 rounded-md w-[238px] h-[238px] shadow-sm"></div>
+            <p class="pt-4 font-semibold text-lg">Glory to the lord</p>
+            <p class="pt-1 text-grey-700">Pete Davidson</p>
+
+          </div>
+
+          <div class="cursor-pointer w-auto h-auto block">
+            <div class="bg-slate-300 rounded-md w-[238px] h-[238px] shadow-sm"></div>
+            <p class="pt-4 font-semibold text-lg">Glory to the lord</p>
+            <p class="pt-1 text-grey-700">Pete Davidson</p>
+
+          </div>
+          
+          <div class="cursor-pointer w-auto h-auto block">
+            <div class="bg-slate-300 rounded-md w-[238px] h-[238px] shadow-sm"></div>
+            <p class="pt-4 font-semibold text-lg">Glory to the lord</p>
+            <p class="pt-1 text-grey-700">Pete Davidson</p>
+
+          </div>
+
+          <div class="cursor-pointer w-auto h-auto block">
+            <div class="bg-slate-300 rounded-md w-[238px] h-[238px] shadow-sm"></div>
+            <p class="pt-4 font-semibold text-lg">Glory to the lord</p>
+            <p class="pt-1 text-grey-700">Pete Davidson</p>
+
+          </div>
+
+          <div class="cursor-pointer w-auto h-auto block">
+            <div class="bg-slate-300 rounded-md w-[238px] h-[238px] shadow-sm"></div>
+            <p class="pt-4 font-semibold text-lg">Glory to the lord</p>
+            <p class="pt-1 text-grey-700">Pete Davidson</p>
+
+          </div>
+
+          <div class="cursor-pointer w-auto h-auto block">
+            <div class="bg-slate-300 rounded-md w-[238px] h-[238px] shadow-sm"></div>
+            <p class="pt-4 font-semibold text-lg">Glory to the lord</p>
+            <p class="pt-1 text-grey-700">Pete Davidson</p>
+
+          </div>
+
+          <div class="cursor-pointer w-auto h-auto block">
+            <div class="bg-slate-300 rounded-md w-[238px] h-[238px] shadow-sm"></div>
+            <p class="pt-4 font-semibold text-lg">Glory to the lord</p>
+            <p class="pt-1 text-grey-700">Pete Davidson</p>
+
+          </div>
+          
+          <div class="cursor-pointer w-auto h-auto block">
+            <div class="bg-slate-300 rounded-md w-[238px] h-[238px] shadow-sm"></div>
+            <p class="pt-4 font-semibold text-lg">Glory to the lord</p>
+            <p class="pt-1 text-grey-700">Pete Davidson</p>
+
+          </div>
+        </div>
+      </div>
+      <Footer/>
     </div>
   </template>
