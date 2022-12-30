@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import { RouterLink, RouterView } from 'vue-router'
+</script>
 <template>
     <div class="w-[98%] h-auto md:h-[60vh] flex flex-col md:flex-row items-center justify-start bg-slate-700 mx-auto my-8 p-16 text-center">
             <div class="flex flex-col items-center justify-center  w-[364px] h-[308px] bg-blue-500 text-white rounded-md mt-[-156px]">
@@ -18,7 +20,7 @@
             <h1 class="font-bold my-1 text-white text-4xl">N'hésitez pas ! Contactez-nous</h1>
             <hr class="bg-yellow-500 w-[12%] h-1 my-3 outline-none"/>
             <p class="my-4 text-left font-normal text-base text-slate-50">Nous vous accueillons avec la grande joie de l'église ECC, Nous sommes ici pour partager la grande nouvelle de Jésus-Christ à tous ceux qui écouteront.</p>
-            <button class="p-3 bg-blue-500 text-white rounded-sm my-3">Nous contacter</button>
+            <router-link to="/contacts"><button class="p-3 bg-blue-500 text-white rounded-sm my-3">Nous contacter</button></router-link>
             </div>
     </div>
 </template>

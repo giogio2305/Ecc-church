@@ -10,8 +10,14 @@ function MenuOpen(){
 </script>
 
 <template>
-  <nav class="relative flex items-center justify-between gap-3 bg-blue-400 text-white px-6  py-4 w-full h-auto">
-   <div class="flex font-bold text-white">ECC LOGO</div>
+  <nav class="relative flex items-center justify-between gap-3 bg-white text-zinc-500 px-4  py-4 w-full h-auto border-b-4 border-yellow-400">
+    <div class="w-[28%] flex items-center justify-start">
+      <div class="w-[60px] h-[46px]">
+                <img src="../assets/LOGO.png" class="w-full h-full object-contain"/>
+            </div>
+            <h5 class="text-lg font-semibold text-zinc-800">Eglise du Christianisme Céleste</h5>
+    </div>
+
 
 
    <span @click="MenuOpen()" class="md:hidden cursor-pointer" >
@@ -25,15 +31,16 @@ function MenuOpen(){
   </span>
 
 
-   <ul class="flex flex-col md:flex-row md:items-center justify-center bg-blue-400 list-none  py-3 px-6 md:py-0 pb-10 md:pb-0 md:static absolute  md:w-[70%] w-full duration-700 ease-in top-14" :class="[open ? 'left-0' : 'left-[-100%]']">
-    <li class="py-1 md:mx-2 hover:text-blue-800"><router-link to="/" class="font-semibold text-base">Acceuil</router-link></li>
-    <li class="py-1 md:mx-2 hover:text-blue-800"><a href="#" class="font-semibold text-base">Services</a></li>
-    <li class="py-1 md:mx-2 hover:text-blue-800"><router-link to="/cantiques" class="font-semibold text-base">Cantiques</router-link></li>
-    <li class="py-1 md:mx-2 hover:text-blue-800"><a href="#" class="font-semibold text-base">Annonces</a></li>
+   <ul class="flex flex-col md:flex-row md:items-center justify-center bg-white list-none  py-3 px-6 md:py-0 pb-10 md:pb-0 md:static absolute  md:w-[70%] w-full duration-700 ease-in top-14" :class="[open ? 'left-0' : 'left-[-100%]']">
+    <li class="hidden md:visible md:ml-24"></li>
+    <li class="py-1 md:mx-2 hover:text-blue-500"><router-link to="/" class="font-semibold text-base">Acceuil</router-link></li>
+    <li class="py-1 md:mx-2 hover:text-blue-500"><a href="#" class="font-semibold text-base">Services</a></li>
+    <li class="py-1 md:mx-2 hover:text-blue-500"><router-link to="/cantiques" class="font-semibold text-base">Cantiques</router-link></li>
+    <li class="py-1 md:mx-2 hover:text-blue-500"><a href="#" class="font-semibold text-base">Annonces</a></li>
     
     <div class=" flex flex-col md:flex-row md:items-center justify-start md:justify-evenly md:ml-48">
-    <a href="#"><div class="w-28 p-2 text-center text-white  font-semibold text-base md:mx-4">Connexion</div></a>
-    <a href="#"><div class="w-28 p-2 text-center rounded-lg bg-yellow-500 text-white font-semibold text-base">S'inscrire</div></a>
+    <a href="#"><div class="w-28 p-2 text-center text-yellow-500  font-semibold text-base md:mx-4">Connexion</div></a>
+    <a href="#"><div class="w-28 p-2 text-center rounded-lg bg-blue-500 text-white font-semibold text-base">S'inscrire</div></a>
    </div> 
   </ul> 
 

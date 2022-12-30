@@ -2,13 +2,12 @@
 import router from '../router'
 import { RouterLink, RouterView } from 'vue-router'
 import SiteNavigation from '../components/SiteNavigation.vue';
-import Footer from '../components/Footer.vue';</script>
+import Footer from '../components/Footer.vue';
+import HeadBanner from '../components/HeadBanner.vue';</script>
 <template>
 <SiteNavigation/>
 <div class="w-full min-h-screen bg-white m-0 p-0">
-    <div class="w-full flex items-center justify-center h-48 bg-blue-300/70">
-            <h1 class="text-3xl font-bold text-zinc-800">Ministere</h1>
-        </div>
+<HeadBanner titre="Ministeres"/>
 
         <div class="flex w-full h-auto">
             <div class="flex flex-col items-center justify-center w-[68%] min-h-[540px] bg-white p-3">
@@ -16,8 +15,8 @@ import Footer from '../components/Footer.vue';</script>
                 <img src="../assets/bc3.jpg" class="object-cover h-full w-full"/>
             </div>
 
-            <p class="w-[92%] text-lg text-zinc-600 tracking-wide leading-wide my-10"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae provident blanditiis cupiditate iusto illum, fugiat ea modi sequi facilis quas eaque unde maxime officiis! Quasi perferendis aliquid natus quaerat! Distinctio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam cum obcaecati nulla corrupti expedita eos id, veritatis fuga error nostrum ipsam optio fugit deserunt omnis. Cum neque amet hic beatae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste laudantium cumque deserunt quaerat harum eius atque eum assumenda quo corporis! Laborum molestias magni impedit nesciunt enim mollitia maxime alias tenetur!</p>
-            <p class="w-[92%] text-lg text-zinc-600 tracking-wide leading-wide"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae provident blanditiis cupiditate iusto illum, fugiat ea modi sequi facilis quas eaque unde maxime officiis! Quasi perferendis aliquid natus quaerat! Distinctio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam cum obcaecati nulla corrupti expedita eos id, veritatis fuga error nostrum ipsam optio fugit deserunt omnis. Cum neque amet hic beatae.</p>   
+            <p class="w-[92%] text-lg text-zinc-600 tracking-wide text-justify leading-wide my-10"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae provident blanditiis cupiditate iusto illum, fugiat ea modi sequi facilis quas eaque unde maxime officiis! Quasi perferendis aliquid natus quaerat! Distinctio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam cum obcaecati nulla corrupti expedita eos id, veritatis fuga error nostrum ipsam optio fugit deserunt omnis. Cum neque amet hic beatae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste laudantium cumque deserunt quaerat harum eius atque eum assumenda quo corporis! Laborum molestias magni impedit nesciunt enim mollitia maxime alias tenetur!</p>
+            <p class="w-[92%] text-lg text-zinc-600 tracking-wide text-justify leading-wide"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae provident blanditiis cupiditate iusto illum, fugiat ea modi sequi facilis quas eaque unde maxime officiis! Quasi perferendis aliquid natus quaerat! Distinctio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam cum obcaecati nulla corrupti expedita eos id, veritatis fuga error nostrum ipsam optio fugit deserunt omnis. Cum neque amet hic beatae.</p>   
 
             <div class=" flex items-center justify-around w-[92%] my-12">
 

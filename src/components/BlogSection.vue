@@ -1,4 +1,6 @@
-<script setup ></script>
+<script setup >
+import { RouterLink, RouterView } from 'vue-router'
+</script>
 <template>
     <div class="w-full flex flex-col items-center justify-center my-16">
         <h3 class="font-bold text-blue-500 text-base">NOTRE BLOG</h3>
@@ -18,7 +20,7 @@
                         <h4 class="mx-3 font-semibold text-lg">21 octobre 2021</h4>
                         </div>
                         <h1 class="w-[90%] my-2 font-bold text-xl">Donner en retour - Centres de formation en Ouganda.</h1>
-                        <a class="text-yellow-500 font-bold text-md"><u>Lire la suite</u></a>
+                        <router-link to="/article"><a class="text-yellow-500 font-bold text-md"><u>Lire la suite</u></a></router-link>
                     </div>
                 </div>
 
@@ -34,7 +36,7 @@
                         <h4 class="mx-3 font-semibold text-lg">21 octobre 2021</h4>
                         </div>
                         <h1 class="w-[90%] my-2 font-bold text-xl">L'Esprit Du Seigneur Est, De La Nouvelle Vie.</h1>
-                        <a class="text-yellow-500 font-bold text-md"><u>Lire la suite</u></a>
+                        <router-link to="/article"><a class="text-yellow-500 font-bold text-md"><u>Lire la suite</u></a></router-link>
                     </div>
                 </div>
 
@@ -50,7 +52,7 @@
                         <h4 class="mx-3 font-semibold text-lg">22 octobre 2021</h4>
                         </div>
                         <h1 class="w-[90%] my-2 font-bold text-xl">Aidez à mettre fin à la crise de l'eau pour les familles.</h1>
-                        <a class="text-yellow-500 font-bold text-md"><u>Lire la suite</u></a>
+                        <router-link to="/article"><a class="text-yellow-500 font-bold text-md"><u>Lire la suite</u></a></router-link>
                     </div>
                 </div>
 
