@@ -40,6 +40,16 @@ const router = createRouter({
       name: 'article',
       component: () => import('../views/Article.vue'),
     },
+    {
+      path: '/bibliotheque',
+      name: 'library',
+      component: () => import('../views/Library.vue'),
+    },
+    {
+      path: '/multimedia',
+      name: 'media',
+      component: () => import('../views/Media.vue'),
+    },
   ]
 })
 

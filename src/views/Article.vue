@@ -12,8 +12,22 @@ const titre = ref("Contactez-nous !");</script>
 
     <div class="flex w-full h-auto">
             <div class="flex flex-col items-center justify-center w-[68%] min-h-[540px] bg-white p-3">
-                <div class="w-[92%] h-[480px] overflow-clip rounded-lg my-10">
-                <img src="../assets/bc3.jpg" class="object-cover h-full w-full"/>
+                <div class="relative flex items-center justify-center w-[92%] h-[480px]  my-10">
+                <img src="../assets/bc3.jpg" class="relative object-cover h-full w-full rounded-lg"/>
+
+                <div class="absolute flex items-center justify-center -bottom-8 w-3/4  shadow-md h-20 bg-white">
+                    <div class="w-7 h-7 rounded-full bg-zinc-900"></div>
+                    <h3 class="text-base text-zinc-700 cursor-pointer hover:text-blue-500 mx-3">Jack</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" class="w-5 h-5 text-blue-600 mx-2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z" />
+                    </svg>
+                    <h3 class="text-base text-zinc-700 cursor-pointer hover:text-blue-500 mx-1">L'amour de Jésus</h3>
+                    <h3 class="text-base text-zinc-700 cursor-pointer hover:text-blue-500 mx-1">serment</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-blue-600 mx-2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <h3 class="text-base text-zinc-700 cursor-pointer hover:text-blue-500 mx-1">21 oct. 2019</h3>
+                </div>
             </div>
 
             <p class="w-[92%] text-lg text-zinc-600 track-wide text-justify leading-wide my-10"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae provident blanditiis cupiditate iusto illum, fugiat ea modi sequi facilis quas eaque unde maxime officiis! Quasi perferendis aliquid natus quaerat! Distinctio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam cum obcaecati nulla corrupti expedita eos id, veritatis fuga error nostrum ipsam optio fugit deserunt omnis. Cum neque amet hic beatae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste laudantium cumque deserunt quaerat harum eius atque eum assumenda quo corporis! Laborum molestias magni impedit nesciunt enim mollitia maxime alias tenetur!</p>

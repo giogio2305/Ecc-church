@@ -2,6 +2,9 @@
 import { RouterLink, RouterView } from 'vue-router'
 import SiteNavigation from '../components/SiteNavigation.vue';
 import Footer from '../components/Footer.vue';
+import { polyfillCountryFlagEmojis } from "country-flag-emoji-polyfill";
+
+polyfillCountryFlagEmojis();
 </script>
 
 <template>
@@ -42,10 +45,19 @@ import Footer from '../components/Footer.vue';
           <h2 class="font-bold text-zinc-800 text-md">Ordre Alphabétique</h2>
           <h5 class="font-semibold text-zinc-300 text-sm">A-Z</h5>
         </div>
+
+        <div class="flex flex-col items-center min-w-[108px] min-h-[54px] p-1.5 ml-6 rounded-lg shadow bg-white">
+          <input type="text" placeholder="Ref. livret Nigéria  &#127475;&#127468;" class="outline-none p-2 text-md font-semibold"/>
+        </div>
+
+        <div class="flex flex-col items-center min-w-[108px] min-h-[54px] p-1.5 ml-6 rounded-lg shadow bg-white">
+          <input type="text" placeholder="Ref. livret Bénin &#127463;&#127471;" class="outline-none p-2 text-md font-semibold"/>
+        </div>
+
       </div>
 
       <div class="max-w-screen-xl  flex items-center flex-wrap pt-10 pb-12 px-6">
-        <h1 class="font-bold text-3xl text-black tracking-tight mb-16">Les plus écoutés</h1>
+        <h1 class="font-bold text-3xl text-black tracking-tight mb-16">Cantiques</h1>
         <div class="w-full grid grid-cols-2  sm:grid-cols-3 md:grid-cols-5 gap-6">
 
           <div class="cursor-pointer w-auto h-auto block">

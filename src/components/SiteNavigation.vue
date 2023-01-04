@@ -34,9 +34,25 @@ function MenuOpen(){
    <ul class="flex flex-col md:flex-row md:items-center justify-center bg-white list-none  py-3 px-6 md:py-0 pb-10 md:pb-0 md:static absolute  md:w-[70%] w-full duration-700 ease-in top-14" :class="[open ? 'left-0' : 'left-[-100%]']">
     <li class="hidden md:visible md:ml-24"></li>
     <li class="py-1 md:mx-2 hover:text-blue-500"><router-link to="/" class="font-semibold text-base">Acceuil</router-link></li>
-    <li class="py-1 md:mx-2 hover:text-blue-500"><a href="#" class="font-semibold text-base">Services</a></li>
+    <li class="py-1 md:mx-2 hover:text-blue-500"><a href="/multimedia" class="font-semibold text-base">Multimédia</a></li>
     <li class="py-1 md:mx-2 hover:text-blue-500"><router-link to="/cantiques" class="font-semibold text-base">Cantiques</router-link></li>
-    <li class="py-1 md:mx-2 hover:text-blue-500"><a href="#" class="font-semibold text-base">Annonces</a></li>
+    <li class="py-1 md:mx-2 hover:text-blue-500"><a href="/bibliotheque" class="font-semibold text-base">Bibliotheque</a></li>
+    <li class="relative group py-1 md:mx-2">
+      <a class="cursor-pointer text-left text-base font-semibold">
+          Autres 
+      </a>
+      <div class="absolute z-10 hidden bg-grey-200 group-hover:block">
+          
+          <div class="px-6 pt-2 pb-4  bg-white shadow-lg rounded-md">
+            <div class="w-20 grid gap-3 md:grid-cols-1">
+              <a href="/multimedia" class="hover:text-blue-500 font-semibold text-base">Paroisses</a>
+              <a href="/multimedia" class="hover:text-blue-500 font-semibold text-base">Calendrier</a>
+              <a href="/multimedia" class="hover:text-blue-500 font-semibold text-base">Annoces</a>
+              <a href="/multimedia" class="hover:text-blue-500 font-semibold text-base">Jobs</a>
+            </div>
+          </div>
+      </div>
+    </li> 
     
     <div class=" flex flex-col md:flex-row md:items-center justify-start md:justify-evenly md:ml-48">
     <a href="#"><div class="w-28 p-2 text-center text-yellow-500  font-semibold text-base md:mx-4">Connexion</div></a>
