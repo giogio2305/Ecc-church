@@ -42,12 +42,12 @@ const router = createRouter({
     },
     {
       path: '/bibliotheque',
-      name: 'library',
+      name: 'bibliotheque',
       component: () => import('../views/Library.vue'),
     },
     {
       path: '/multimedia',
-      name: 'media',
+      name: 'multimedia',
       component: () => import('../views/Media.vue'),
     },
   ]
