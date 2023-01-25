@@ -45,8 +45,8 @@ function MenuOpen(){
           
           <div class="px-6 pt-2 pb-4  bg-white shadow-lg rounded-md">
             <div class="w-20 grid gap-3 md:grid-cols-1">
-              <a href="/multimedia" class="hover:text-blue-500 font-semibold text-base">Paroisses</a>
-              <a href="/multimedia" class="hover:text-blue-500 font-semibold text-base">Calendrier</a>
+              <a href="/paroisses" class="hover:text-blue-500 font-semibold text-base">Paroisses</a>
+              <a href="/calendrier" class="hover:text-blue-500 font-semibold text-base">Calendrier</a>
               <a href="/multimedia" class="hover:text-blue-500 font-semibold text-base">Annoces</a>
               <a href="/multimedia" class="hover:text-blue-500 font-semibold text-base">Jobs</a>
             </div>

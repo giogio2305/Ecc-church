@@ -1,6 +1,6 @@
 <script setup></script>
 <template>
-    <div class="md:flex flex-col md:flex-row items-center justify-start w-full md:h-[100vh] bg-slate-50 p-1 mb-3">
+    <div class="md:flex flex-col md:flex-row items-center justify-start w-[96%] mx-auto md:h-[100vh] bg-white p-1 mb-3">
 
             <div class="flex flex-col w-[84%] md:w-[23%] h-full">
                 <div class="flex flex-col m-6">

@@ -50,6 +50,16 @@ const router = createRouter({
       name: 'multimedia',
       component: () => import('../views/Media.vue'),
     },
+    {
+      path: '/paroisses',
+      name: 'paroisses',
+      component: () => import('../views/Map.vue'),
+    },
+    {
+      path: '/calendrier',
+      name: 'calendrier',
+      component: () => import('../views/Calendar.vue'),
+    },
   ]
 })
 

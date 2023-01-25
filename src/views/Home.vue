@@ -12,7 +12,7 @@ import Footer from '../components/Footer.vue';
 </script>
 
 <template>
-  <div class="flex flex-col min-h-screen bg-slate-100 m-0 p-0 overflow-hidden">
+  <div class="flex flex-col min-h-screen bg-white m-0 p-0 overflow-hidden">
     <SiteNavigation/>
     <BannerCards/> 
     <EventCards/>

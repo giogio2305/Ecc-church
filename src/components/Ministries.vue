@@ -2,12 +2,14 @@
 import { RouterLink, RouterView } from 'vue-router'
 </script>
 <template>
-    <div class="w-full flex flex-col items-center justify-center my-16">
-        <h3 class="font-bold text-blue-500 text-base">Ministères</h3>
-            <h1 class="font-bold my-2 text-slate-700 text-3xl">Nos ministères</h1>
-            <hr class="bg-blue-500 w-[6%] h-1 my-2"/>
+    <div class="w-full flex flex-col items-center justify-center my-16 ">
+        <div class="w-full mx-auto flex items-center justify-center">
+                <div class="w-5 h-5 bg-blue-600 rounded-full mx-4"></div>
+                <h1 class="font-bold text-3xl text-zinc-800 mr-6">Nos Ministères</h1>
+                <div class="w-[48%] h-4 bg-gray-300"></div>
+            </div>
 
-            <div class="flex flex-col md:flex-row items-center justify-center my-16">
+            <div class="flex flex-col md:flex-row items-center justify-center my-10 ">
                 <div class="w-[328px] h-[448px]  rounded-lg shadow-sm ">
                     <div class="w-[100%] h-[50%] overflow-clip rounded-t-lg">
                         <img src="../assets/met.jpg" class="w-full h-full object-cover "/>

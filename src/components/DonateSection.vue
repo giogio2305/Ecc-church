@@ -1,6 +1,6 @@
 <script setup ></script>
 <template>
-    <div class="relative w-full md:w-[98%] md:h-[80vh] flex flex-col items-center justify-center  bg-[url('../assets/bdt.jpg')] bg-cover bg-no-repeat mx-auto my-8 p-12 text-center">
+    <!-- <div class="relative w-full md:w-[98%] md:h-[80vh] flex flex-col items-center justify-center  bg-[url('../assets/bdt.jpg')] bg-cover bg-no-repeat mx-auto my-8 p-12 text-center">
         <div class="absolute inset-0 bg-zinc-500/30 w-full h-full"></div>
         <div class="relative w-full h-full flex flex-col items-center justify-center">
             <span class="flex items-center justify-center my-2 w-24 h-24 bg-yellow-500/40  rounded-full">
@@ -16,5 +16,16 @@
         <h3 class="my-6 font-medium text-white text-xl">Real Story Cross Journey from Anna Hampton</h3>
         <button class="my-4 p-3  border-blue-400 border-2 text-white">Faire un Don en Ligne</button>
         </div>
-            </div>
+            </div> -->
+<div class='relative flex items-center justify-center w-[88%] h-[240px] bg-indigo-600 rounded-xl mx-auto'>
+    <div class="absolute bg-[url('../assets/newsletter_bg.png')] bg-cover w-full h-full"></div>
+    <div class="relative w-full flex items-center justify-between px-40">
+        <div class="flex flex-col w-[468px] mr-6">
+            <h1 class="font-bold text-3xl text-white">Faites vos donations en ligne depuis notre site.</h1>
+            <p class="text-slate-100 font-medium my-4 text-lg">Venez en aide au necessiteux à votre niveau, apportez un peu d'amour.</p>
+        </div>
+
+        <div class="w-36  bg-white text-center font-medium text-blue-600 p-5 rounded-lg">Faire un don</div>
+    </div>
+</div>
 </template>
