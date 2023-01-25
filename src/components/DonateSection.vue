@@ -17,7 +17,7 @@
         <button class="my-4 p-3  border-blue-400 border-2 text-white">Faire un Don en Ligne</button>
         </div>
             </div> -->
-<div class='relative flex items-center justify-center w-[88%] h-[240px] bg-indigo-600 rounded-xl mx-auto'>
+<div class='relative flex items-center justify-center w-[88%] h-[240px] bg-indigo-600 rounded-xl mx-auto my-10'>
     <div class="absolute bg-[url('../assets/newsletter_bg.png')] bg-cover w-full h-full"></div>
     <div class="relative w-full flex items-center justify-between px-40">
         <div class="flex flex-col w-[468px] mr-6">

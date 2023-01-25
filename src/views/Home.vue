@@ -19,7 +19,7 @@ import Footer from '../components/Footer.vue';
     <AboutUs/>
     <DonateSection/>
     <Ministries/>
-    <ContactSection/>
+    <!-- <ContactSection/> -->
     <BlogSection/>
     <Footer/>
   </div>

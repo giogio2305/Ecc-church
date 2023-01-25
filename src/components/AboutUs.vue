@@ -55,12 +55,59 @@ import { RouterLink, RouterView } from 'vue-router'
                     <div class="absolute  ml-2 mt-2 flex items-center justify-center h-[276px] w-[416px] bg-indigo-600 rounded-lg"></div>
                     <div class="relative flex items-center justify-center h-[276px] w-[416px] bg-violet-200 rounded-lg"></div>
                 </div>
-                <div class="fle flex-col w-[296px] h-[354px] ml-6 bg-slate-400">
-                        <div></div>
+                <div class="flex flex-col items-start justify-start w-[296px] h-[354px] ml-6 bg-white p-3">
+                        <div class="h-[198px] w-[268px] bg-violet-300 rounded-xl"></div>
+                        <h1 class="font-semibold text-2xl my-4 text-left">La spiritualité et le travail quel impact.</h1>
+                        <span class="flex">
+                        <h6 class="font-normal text-gray-500 text-base mr-4">Par John Leo</h6>
+                        <h6 class="flex items-center font-normal text-gray-500 text-base">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+                            </svg>
+                            28 mars 2021</h6>
+                    </span>
                 </div>
-                <div class="w-[424px] h-[184px] bg-slate-400 mt-[-40px]"></div>
-                <div class="w-[296px] h-[354px] ml-6 bg-slate-400"></div>
-                <div class="w-[424px] h-[184px] bg-slate-400 mt-[-192px]"></div> 
+                <div class="flex items-center justify-center w-[424px] h-[184px] bg-white mt-[-40px] px-2">
+                    <div class="w-[240px] h-[156px] rounded-xl bg-violet-300"></div>
+                    <div class="flex flex-col ml-4">
+                        <div class="bg-pink-700 p-1 rounded-md text-white font-semibold w-24">Technology</div>
+                        <h2 class="my-1.5 font-semibold text-[21px] text-zinc-800">Paix du coeur et santé, le role du seigneur </h2>
+            <span class="flex my-1">
+                <h6 class="flex items-center font-normal text-gray-500 text-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+                            </svg>
+                            28 mars 20211</h6>
+                    </span>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col items-start justify-start w-[296px] h-[354px] ml-6 bg-white p-3">
+                        <div class="h-[198px] w-[268px] bg-violet-300 rounded-xl"></div>
+                        <h1 class="font-semibold text-2xl my-4 text-left">L'amour de Dieu, un gage sur pour le salut de l'ame.</h1>
+                        <span class="flex">
+                        <h6 class="font-normal text-gray-500 text-base mr-4">Par John Leo</h6>
+                        <h6 class="flex items-center font-normal text-gray-500 text-base">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+                            </svg>
+                            28 mars 2021</h6>
+                    </span>
+                </div>
+                <div class="flex items-center justify-center w-[424px] h-[184px] bg-white mt-[-192px] px-2">
+                    <div class="w-[240px] h-[156px] rounded-xl bg-violet-300"></div>
+                    <div class="flex flex-col ml-4">
+                        <div class="bg-red-700 p-1 rounded-md text-white font-semibold w-24 text-center">Amour</div>
+                        <h2 class="my-1.5 font-semibold text-[21px] text-zinc-800">Paix du coeur et santé, le role du seigneur </h2>
+            <span class="flex my-1">
+                <h6 class="flex items-center font-normal text-gray-500 text-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+                            </svg>
+                            28 mars 20211</h6>
+                    </span>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -74,8 +121,8 @@ import { RouterLink, RouterView } from 'vue-router'
 
         <div class="flex flex-col w-[254px] h-auto p-1.5 my-4 border-b-2 border-gray-300 pb-6">
             <div class="flex items-center justify-start w-full">
-                <div class="w-6 h-2 bg-violet-800"></div>
-                <h4 class="text-base text-violet-800 ml-3">Santé</h4>
+                <div class="w-6 h-2 bg-red-600"></div>
+                <h4 class="text-base text-red-600 ml-3">Santé</h4>
             </div>
             <h2 class="my-1.5 font-semibold text-[21px] text-zinc-800">Paix du coeur et santé, le role du seigneur </h2>
             <span class="flex my-1">
@@ -89,8 +136,8 @@ import { RouterLink, RouterView } from 'vue-router'
 
         <div class="flex flex-col w-[254px] h-auto p-1.5 my-4 border-b-2 border-gray-300 pb-6">
             <div class="flex items-center justify-start w-full">
-                <div class="w-6 h-2 bg-violet-800"></div>
-                <h4 class="text-base text-violet-800 ml-3">Santé</h4>
+                <div class="w-6 h-2 bg-blue-600"></div>
+                <h4 class="text-base text-blue-600 ml-3">Santé</h4>
             </div>
             <h2 class="my-1.5 font-semibold text-[21px] text-zinc-800">Paix du coeur et santé, le role du seigneur </h2>
             <span class="flex my-1">
@@ -104,8 +151,8 @@ import { RouterLink, RouterView } from 'vue-router'
 
         <div class="flex flex-col w-[254px] h-auto p-1.5 my-4 border-b-2 border-gray-300 pb-6">
             <div class="flex items-center justify-start w-full">
-                <div class="w-6 h-2 bg-violet-800"></div>
-                <h4 class="text-base text-violet-800 ml-3">Santé</h4>
+                <div class="w-6 h-2 bg-orange-600"></div>
+                <h4 class="text-base text-orange-600 ml-3">Santé</h4>
             </div>
             <h2 class="my-1.5 font-semibold text-[21px] text-zinc-800">Paix du coeur et santé, le role du seigneur </h2>
             <span class="flex my-1">
@@ -119,8 +166,8 @@ import { RouterLink, RouterView } from 'vue-router'
 
         <div class="flex flex-col w-[254px] h-auto p-1.5 my-4">
             <div class="flex items-center justify-start w-full">
-                <div class="w-6 h-2 bg-violet-800"></div>
-                <h4 class="text-base text-violet-800 ml-3">Santé</h4>
+                <div class="w-6 h-2 bg-green-600"></div>
+                <h4 class="text-base text-green-600 ml-3">Santé</h4>
             </div>
             <h2 class="my-1.5 font-semibold text-[21px] text-zinc-800">Paix du coeur et santé, le role du seigneur </h2>
             <span class="flex my-1">
