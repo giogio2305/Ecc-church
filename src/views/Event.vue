@@ -6,7 +6,6 @@ import Footer from '../components/Footer.vue';
 </script>
 
 <template>
-    <SiteNavigation/>
     <div class="w-full min-h-screen bg-white m-0 p-0">
         <div class="w-full flex items-center justify-center h-48 bg-blue-300/70">
             <h1 class="text-3xl font-bold text-zinc-800">Événement : Refléter la communauté et servir</h1>
@@ -151,5 +150,4 @@ import Footer from '../components/Footer.vue';
             <div class="w-[92%] h-[480px] bg-green-200 rounded-lg mt-10"></div>
         </div>
     </div>
-    <Footer/>
 </template>

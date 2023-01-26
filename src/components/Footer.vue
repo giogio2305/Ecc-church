@@ -1,7 +1,7 @@
 <script setup></script>
 <template>
     <div class="w-full md:h-[68vh] mt-12">
-        <div class="w-full md:h-[85%] p-16 bg-slate-800 flex flex-col md:flex-row items-start justify-center">
+        <div class="w-full md:h-[85%] lg:p-16 px-4 py-8 bg-slate-800 flex flex-col md:flex-row items-start justify-center">
            
             <div class="flex flex-col w-full my-8 md:my-0 md:w-[calc(100%/4)]">
                 <h3 class="font-bold text-2xl text-white">À propos d'Ecc</h3>

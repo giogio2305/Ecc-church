@@ -7,7 +7,6 @@ import { ref } from "vue";
 const titre = ref("Contactez-nous !");
 </script>
 <template>
-   <SiteNavigation/>
    <div class="w-full min-h-screen bg-white m-0 p-0">
     <HeadBanner titre="Contactez-nous !"/>
 
@@ -82,5 +81,5 @@ const titre = ref("Contactez-nous !");
         <div class="w-[92%] h-[480px] mx-auto bg-green-200 rounded-lg mt-10"></div>
 
         </div>
-   <Footer/>
+
 </template>

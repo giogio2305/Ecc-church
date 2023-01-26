@@ -5,7 +5,6 @@ import Footer from '../components/Footer.vue';
 </script>
 
 <template>
-    <SiteNavigation/>
     <div class="flex flex-col min-h-screen bg-slate-100">
         <div class="relative w-full h-[60vh] bg-[url('../assets/media.jpg')] bg-cover bg-no-repeat bg-[3%] flex flex-col items-start justify-end">
             <div class="absolute top-0 w-full h-[49.5vh] bg-zinc-900/50"></div>
@@ -111,6 +110,5 @@ import Footer from '../components/Footer.vue';
 </div>
 </div>
 
-        <Footer/>
     </div>
 </template>

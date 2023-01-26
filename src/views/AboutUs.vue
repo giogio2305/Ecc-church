@@ -1,9 +1,5 @@
 <script setup>
-import SiteNavigation from '../components/SiteNavigation.vue';
-import Footer from '../components/Footer.vue';</script>
-
 <template>
-<SiteNavigation/>
 <div class="w-full min-h-screen bg-white m-0 p-0">
         <div class="w-full flex items-center justify-center h-48 bg-blue-300/70">
             <h1 class="text-3xl font-bold text-zinc-800">À propos de nous</h1>
@@ -96,5 +92,4 @@ import Footer from '../components/Footer.vue';</script>
             
     </div>
 </div>
-<Footer/>
 </template>

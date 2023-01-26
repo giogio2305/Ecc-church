@@ -1,12 +1,9 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
 import BannerCards from '../components/BannerCards.vue';
 import EventCards from '../components/EventCards.vue';
-import SiteNavigation from '../components/SiteNavigation.vue';
 import AboutUs from '../components/AboutUs.vue'
 import DonateSection from '../components/DonateSection.vue';
 import Ministries from '../components/Ministries.vue';
-import ContactSection from '../components/ContactSection.vue';
 import BlogSection from '../components/BlogSection.vue';
 
 </script>
@@ -18,7 +15,6 @@ import BlogSection from '../components/BlogSection.vue';
     <AboutUs/>
     <DonateSection/>
     <Ministries/>
-    <!-- <ContactSection/> -->
     <BlogSection/>
   </div>
 </template>

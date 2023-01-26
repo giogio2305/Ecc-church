@@ -5,7 +5,6 @@ import SiteNavigation from '../components/SiteNavigation.vue';
 import Footer from '../components/Footer.vue';
 import HeadBanner from '../components/HeadBanner.vue';</script>
 <template>
-<SiteNavigation/>
 <div class="w-full min-h-screen bg-white m-0 p-0">
 <HeadBanner titre="Ministeres"/>
 
@@ -199,5 +198,4 @@ import HeadBanner from '../components/HeadBanner.vue';</script>
             </div>
         </div>
 </div>
-<Footer/>
 </template>

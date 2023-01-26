@@ -6,7 +6,6 @@ import HeadBanner from '../components/HeadBanner.vue';
 import { ref } from "vue";
 const titre = ref("Contactez-nous !");</script>
 <template>
-<SiteNavigation/>
    <div class="w-full min-h-screen bg-white m-0 p-0">
     <HeadBanner titre="Donner en retour - Centres de formation en Ouganda."/>
 
@@ -238,5 +237,4 @@ const titre = ref("Contactez-nous !");</script>
             </div>
         </div>
     </div>
-<Footer/>
 </template>

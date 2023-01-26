@@ -4,7 +4,6 @@ import SiteNavigation from '../components/SiteNavigation.vue';
 import Footer from '../components/Footer.vue';
 </script>
 <template>
-<SiteNavigation/>
 <div class="flex flex-col min-h-screen bg-white m-0 p-0">
 <div class="w-full h-[48vh] bg-slate-100 flex flex-col items-center justify-center">
     <h1 class="font-bold text-4xl text-slate-900 tracking-tight mb-8">Calendrier</h1>
@@ -25,6 +24,5 @@ import Footer from '../components/Footer.vue';
         </div>
       </div>
 </div>
-    <Footer/>
 </div>
 </template>

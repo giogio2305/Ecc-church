@@ -8,7 +8,6 @@ polyfillCountryFlagEmojis();
 </script>
 
 <template>
-        <SiteNavigation/>
     <div class="flex flex-col min-h-screen bg-slate-100">
       <div class="w-full h-[60vh] bg-[url('../assets/praise.jpg')] bg-cover bg-no-repeat bg-right flex flex-col items-start justify-end">
 
@@ -131,6 +130,5 @@ polyfillCountryFlagEmojis();
           </div>
         </div>
       </div>
-      <Footer/>
     </div>
   </template>
