@@ -4,7 +4,6 @@ import SiteNavigation from '../components/SiteNavigation.vue';
 import Footer from '../components/Footer.vue';
 </script>
 <template>
-    <SiteNavigation/>
     <div class="flex flex-col min-h-screen bg-white m-0 p-0">
         <div class="w-full h-screen flex">
             <div class="flex flex-col p-6 w-[45%] bg-white h-full">
@@ -38,6 +37,6 @@ import Footer from '../components/Footer.vue';
             </div>
             <div class="w-[55%] bg-slate-100 h-full"></div>
         </div>
-        <Footer class="-mt-12"/>
+
     </div>
 </template>

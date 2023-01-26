@@ -1,64 +1,107 @@
 import { createRouter, createWebHistory } from 'vue-router'
+const Footer = () => import ('../components/Footer.vue');
+const Header = () => import ('../components/SiteNavigation.vue');
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
       name: 'home',
-      component: () => import('../views/Home.vue'),
+      components: {
+        default: () => import('../views/Home.vue'),
+        header: Header,
+        footer: Footer,
+      },
     },
     {
       path: '/cantiques',
-      name: 'cantiques',
-      component: () => import('../views/Cantiques.vue'),
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
+      name: 'cantique',
+      components: {
+        default: () => import('../views/Cantiques.vue'),
+        header: Header,
+        footer: Footer,
+      },
     },
     {
       path: '/evenement',
       name: 'evenement',
-      component: () => import('../views/Event.vue'),
+      components: {
+        default: () => import('../views/Event.vue'),
+        header: Header,
+        footer: Footer,
+      }
     },
     {
       path: '/ecc',
-      name: 'About us',
-      component: () => import('../views/AboutUs.vue'),
+      name: 'about-us',
+      components: {
+        default: () => import('../views/AboutUs.vue'),
+        header: Header,
+        footer: Footer,
+      }
     },
     {
-      path: '/ministere',
-      name: 'ministere',
-      component: () => import('../views/Ministries.vue'),
+      path: '/ministry',
+      name: 'ministry',
+      components: {
+        default:() => import('../views/Ministries.vue'),
+        header: Header,
+        footer: Footer,
+      }
     },
     {
-      path: '/contacts',
-      name: 'contacts',
-      component: () => import('../views/Contact.vue'),
+      path: '/contact',
+      name: 'contact',
+      components: {
+        default: () => import('../views/Contact.vue'),
+        header: Header,
+        footer: Footer,
+      }
     },
     {
       path: '/article',
       name: 'article',
-      component: () => import('../views/Article.vue'),
+      components: {
+        default:() => import('../views/Article.vue'),
+        header: Header,
+        footer: Footer,
+      }
     },
     {
-      path: '/bibliotheque',
-      name: 'bibliotheque',
-      component: () => import('../views/Library.vue'),
+      path: '/library',
+      name: 'library',
+      components: {
+        default: () => import('../views/Library.vue'),
+        header: Header,
+        footer: Footer,
+      }
     },
     {
-      path: '/multimedia',
+      path: '/multimedias',
       name: 'multimedia',
-      component: () => import('../views/Media.vue'),
+      components: {
+          default: () => import('../views/Media.vue'),
+          header: Header,
+          footer: Footer,
+        }
     },
     {
       path: '/paroisses',
       name: 'paroisses',
-      component: () => import('../views/Map.vue'),
+      components: {
+        default: () => import('../views/Map.vue'),
+        header: Header,
+        footer: Footer,
+      }
     },
     {
       path: '/calendrier',
       name: 'calendrier',
-      component: () => import('../views/Calendar.vue'),
+      components: {
+        default: () => import('../views/Calendar.vue'),
+        header: Header,
+        footer: Footer,
+      }
     },
   ]
 })

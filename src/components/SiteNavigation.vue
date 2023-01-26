@@ -1,65 +1,277 @@
 <script setup>
-import { ref } from 'vue';
-import { RouterLink, RouterView } from 'vue-router'
+import { reactive } from 'vue';
+import { MagnifyingGlassIcon, ChevronDownIcon, ChevronUpIcon, Bars3Icon, XMarkIcon } from '@heroicons/vue/24/solid';
 
-let open = ref(false);
+let open = reactive({
+  menu:false,
+  submenu: {
+    publication: false,
+    profil:false,
+    multimedia:false,
+    cantiques:false,
+    document:false,
+  }
+});
 
-function MenuOpen(){
-  open.value = !open.value;
-}
 </script>
 
 <template>
-  <nav class="relative flex items-center justify-between gap-3 bg-white text-zinc-500 px-4  py-4 w-full h-auto border-b-4 border-yellow-400">
-    <div class="w-[28%] flex items-center justify-start">
-      <div class="w-[60px] h-[46px]">
-                <img src="../assets/LOGO.png" class="w-full h-full object-contain"/>
-            </div>
-            <h5 class="text-lg font-semibold text-zinc-800">Eglise du Christianisme Céleste</h5>
+  <header class="relative  bg-white text-zinc-500   w-full h-auto shadow">
+    <div class="flex justify-between items-center sm:px-6 px-4 py-4">
+      <div class="lg:w-2/6">
+        <router-link to="/" class="inline-flex items-center">
+          <div class="lg:h-14 h-12 ">
+              <img src="../assets/LOGO.png" class="w-full h-full object-cover"/> 
+          </div>
+          <h1 class="font-bold xl:text-xl text-sm  text-gray-800">Eglise du Christianisme celeste</h1>
+        </router-link>
+      </div>
+
+      <div class="relative w-2/6 lg:block hidden">
+          <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+              <MagnifyingGlassIcon class="w-5 h-5 text-gray-400" />
+          </span>
+          <input type="text" class="w-full py-2 pl-10 pr-4 text-gray-700 bg-white border rounded-lg  focus:border-blue-400  focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300" placeholder="Search">
+      </div>
+
+      <div class=" lg:flex xl:text-base text-sm hidden w-2/6 px-4 items-center justify-end">
+        <a href="#" class="py-2 px-4 text-center rounded-lg bg-blue-500 text-white font-semibold">Rejoindre la communauté</a>
+        <a href="#" class="py-2 px-4  text-center text-blue-500  font-semibold md:mx-4">Se Connecter</a>
+      </div> 
+
+      <div @click="open.menu = !open.menu" class="lg:hidden block">
+        <button type="button">
+          <Bars3Icon v-if="!open.menu"  class="h-6 w-6" />
+          <XMarkIcon v-else class="h-6 w-6" />
+        </button>
+      </div>
+
     </div>
 
-
-
-   <span @click="MenuOpen()" class="md:hidden cursor-pointer" >
-  <svg v-if="open"  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-</svg>
-
-<svg v-else xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-  </svg>
-  </span>
-
-
-   <ul class="flex flex-col md:flex-row md:items-center justify-center bg-white list-none  py-3 px-6 md:py-0 pb-10 md:pb-0 md:static absolute  md:w-[70%] w-full duration-700 ease-in top-14" :class="[open ? 'left-0' : 'left-[-100%]']">
-    <li class="hidden md:visible md:ml-24"></li>
-    <li class="py-1 md:mx-2 hover:text-blue-500"><router-link to="/" class="font-semibold text-base">Acceuil</router-link></li>
-    <li class="py-1 md:mx-2 hover:text-blue-500"><a href="/multimedia" class="font-semibold text-base">Multimédia</a></li>
-    <li class="py-1 md:mx-2 hover:text-blue-500"><router-link to="/cantiques" class="font-semibold text-base">Cantiques</router-link></li>
-    <li class="py-1 md:mx-2 hover:text-blue-500"><a href="/bibliotheque" class="font-semibold text-base">Bibliotheque</a></li>
-    <li class="relative group py-1 md:mx-2">
-      <a class="cursor-pointer text-left text-base font-semibold">
-          Autres 
-      </a>
-      <div class="absolute z-10 hidden bg-grey-200 group-hover:block">
-          
-          <div class="px-6 pt-2 pb-4  bg-white shadow-lg rounded-md">
-            <div class="w-20 grid gap-3 md:grid-cols-1">
-              <a href="/paroisses" class="hover:text-blue-500 font-semibold text-base">Paroisses</a>
-              <a href="/calendrier" class="hover:text-blue-500 font-semibold text-base">Calendrier</a>
-              <a href="/multimedia" class="hover:text-blue-500 font-semibold text-base">Annoces</a>
-              <a href="/multimedia" class="hover:text-blue-500 font-semibold text-base">Jobs</a>
-            </div>
+   
+    <nav class="relative lg:block hidden">
+      <ul class="flex items-center justify-center list-none space-x-6 w-full  xl:text-lg text-sm  " >
+        <li class="py-4"><router-link :to="{name:'home'}" class="cursor-pointer p-2 rounded-lg text-left font-semibold text-gray-500 hover:bg-blue-500 hover:text-white">Acceuil</router-link></li>
+        <li class="relative group py-4">
+          <di class="cursor-pointer p-2 rounded-lg text-left font-semibold flex items-center  text-gray-500 group-hover:bg-blue-500 group-hover:text-white">
+            <span>Publications</span>  
+             <span class="ml-1">
+              <ChevronDownIcon class="h-4 w-4 group-hover:hidden transition-all duration-500" />
+              <ChevronUpIcon class="h-4 w-4 hidden group-hover:block transition-all duration-500" />
+             </span>
+          </di>
+          <div class="absolute z-50 hidden bg-white w-52 shadow top-full left-0 rounded-b-lg text-sm  group-hover:block">
+                  <a href="#" class="hover:text-white hover:bg-blue-500 px-4 py-2  font-semibold block">Messages</a>
+                  <a href="#" class="hover:text-white hover:bg-blue-500 px-4 py-2  font-semibold block">Jobs</a>
+                  <a href="#" class="hover:text-white hover:bg-blue-500 px-4 py-2  font-semibold block">Evenements</a>
+                  <a href="#" class="hover:text-white hover:bg-blue-500 px-4 py-2 rounded-b-lg  font-semibold block">Annonces</a>
           </div>
+        </li>
+        <li class="relative group py-4">
+          <a href="#" class="cursor-pointer p-2 rounded-lg text-left font-semibold flex items-center  text-gray-500 group-hover:bg-blue-500 group-hover:text-white">
+            <span>Profils</span>  
+             <span class="ml-1">
+              <ChevronDownIcon class="h-4 w-4 group-hover:hidden transition-all duration-500" />
+              <ChevronUpIcon class="h-4 w-4 hidden group-hover:block transition-all duration-500" />
+             </span>
+          </a>
+          <div class="absolute z-10 hidden bg-white w-52 shadow top-full left-0 rounded-b-lg text-sm  group-hover:block">
+                  <a href="#" class="hover:text-white hover:bg-blue-500 px-4 py-2  font-semibold block">Fidèle</a>
+                  <a href="#" class="hover:text-white hover:bg-blue-500 px-4 py-2  font-semibold block">Chargé Paroissial</a>
+                  <a href="#" class="hover:text-white hover:bg-blue-500 px-4 py-2  font-semibold block">Groupe de Prière</a>
+                  <a href="#" class="hover:text-white hover:bg-blue-500 px-4 py-2  font-semibold block">Diocèse</a>
+                  <a href="#" class="hover:text-white hover:bg-blue-500 px-4 py-2 rounded-b-lg  font-semibold block">Siège</a>
+          </div>
+        </li>
+        <li class="py-4"><router-link :to="{name:'home'}" class="cursor-pointer p-2 rounded-lg text-left font-semibold text-gray-500 hover:bg-blue-500 hover:text-white">Paroisses</router-link></li>
+        <li class="relative group py-4">
+          <a href="#" class="cursor-pointer p-2 rounded-lg text-left font-semibold flex items-center  text-gray-500 group-hover:bg-blue-500 group-hover:text-white">
+            <span>Multimédia</span>  
+             <span class="ml-1">
+              <ChevronDownIcon class="h-4 w-4 group-hover:hidden transition-all duration-500" />
+              <ChevronUpIcon class="h-4 w-4 hidden group-hover:block transition-all duration-500" />
+             </span>
+          </a>
+          <div class="absolute z-10 hidden bg-white w-52 shadow top-full left-0 rounded-b-lg text-sm  group-hover:block">
+                  <a href="#" class="hover:text-white hover:bg-blue-500 px-4 py-2  font-semibold block">Audio</a>
+                  <a href="#" class="hover:text-white hover:bg-blue-500 px-4 py-2 rounded-b-lg  font-semibold block">Video</a>
+          </div>
+        </li>
+        <li class="relative group py-4">
+          <a href="#" class="cursor-pointer p-2 rounded-lg text-left font-semibold flex items-center  text-gray-500 group-hover:bg-blue-500 group-hover:text-white">
+            <span>Cantiques</span>  
+             <span class="ml-1">
+              <ChevronDownIcon class="h-4 w-4 group-hover:hidden transition-all duration-500" />
+              <ChevronUpIcon class="h-4 w-4 hidden group-hover:block transition-all duration-500" />
+             </span>
+          </a>
+          <div class="absolute z-10 hidden bg-white w-52 shadow top-full left-0 rounded-b-lg text-sm  group-hover:block">
+                  <a href="#" class="hover:text-white hover:bg-blue-500 px-4 py-2  font-semibold block">Audios</a>
+                  <a href="#" class="hover:text-white hover:bg-blue-500 px-4 py-2  font-semibold block">Playlists</a>
+                  <a href="#" class="hover:text-white hover:bg-blue-500 px-4 py-2 rounded-b-lg  font-semibold block">Partitions</a>
+          </div>
+        </li>
+        <li class="py-4"><router-link :to="{name:'home'}" class="cursor-pointer p-2 rounded-lg text-left font-semibold text-gray-500 hover:bg-blue-500 hover:text-white">Formations</router-link></li>
+        <li class="relative group py-4">
+          <a href="#" class="cursor-pointer p-2 rounded-lg text-left font-semibold flex items-center  text-gray-500 group-hover:bg-blue-500 group-hover:text-white">
+            <span>Documents</span>  
+             <span class="ml-1">
+              <ChevronDownIcon class="h-4 w-4 group-hover:hidden transition-all duration-500" />
+              <ChevronUpIcon class="h-4 w-4 hidden group-hover:block transition-all duration-500" />
+             </span>
+          </a>
+          <div class="absolute z-10 hidden bg-white w-52 shadow top-full left-0 rounded-b-lg text-sm  group-hover:block">
+                  <a href="#" class="hover:text-white hover:bg-blue-500 px-4 py-2  font-semibold block">Livres</a>
+                  <a href="#" class="hover:text-white hover:bg-blue-500 px-4 py-2 rounded-b-lg  font-semibold block">Documents officiels</a>
+          </div>
+        </li>
+        <li class="py-4"><router-link :to="{name:'contact'}" class="cursor-pointer p-2 rounded-lg text-left font-semibold text-gray-500 hover:bg-blue-500 hover:text-white">Contact</router-link></li>     
+      </ul> 
+    </nav>
+
+    <Transition
+            enter-active-class="transition duration-500"
+            enter-from-class="opacity-0 -translate-x-full absolute"
+            enter-to-class="opacity-1 translate-x-0"
+            leave-active-class="transition duration-500"
+            leave-from-class="opacity-1/2 translate-x-0"
+            leave-to-class="translate-x-1/2 opacity-0 "
+        >
+    <nav class="relative w-full" v-if="open.menu">
+      <div class="relative w-full px-6">
+          <span class="absolute inset-y-0 left-6 flex items-center pl-3">
+              <MagnifyingGlassIcon class="w-5 h-5 text-gray-400" />
+          </span>
+          <input type="text" class="w-full py-2 pl-10 pr-4 text-gray-700 bg-white border rounded-lg  focus:border-blue-400 text-sm  focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300" placeholder="Search">
       </div>
-    </li> 
-    
-    <div class=" flex flex-col md:flex-row md:items-center justify-start md:justify-evenly md:ml-48">
-    <a href="#"><div class="w-28 p-2 text-center text-yellow-500  font-semibold text-base md:mx-4">Connexion</div></a>
-    <a href="#"><div class="w-28 p-2 text-center rounded-lg bg-blue-500 text-white font-semibold text-base">S'inscrire</div></a>
-   </div> 
-  </ul> 
-
-
-  </nav>
+      <ul class="flex items-start flex-col justify-start py-4 list-none w-full text-sm" >
+        <li class="py-1 px-6 w-full"><router-link :to="{name:'home'}" class="cursor-pointer p-2  text-left block font-semibold text-gray-500 hover:bg-blue-500 focus:bg-blue-500 w-full hover:text-white">Acceuil</router-link></li>
+        <li class="relative py-1 px-6 w-full">
+          <div @click="open.submenu.publication = !open.submenu.publication" class="cursor-pointer p-2 text-left font-semibold flex justify-between w-full items-center  text-gray-500 hover:bg-blue-500 hover:text-white">
+            <span>Publications</span>  
+            <span class="">
+              <ChevronDownIcon v-if="!open.submenu.publication" class="h-4 w-4" />
+              <ChevronUpIcon v-else class="h-4 w-4" />
+             </span>
+          </div>
+          <Transition
+            enter-active-class="transition duration-500"
+            enter-from-class="opacity-0 -translate-x-full absolute"
+            enter-to-class="opacity-1 translate-x-0"
+            leave-active-class="transition duration-500"
+            leave-from-class="opacity-1/2 translate-x-0"
+            leave-to-class="translate-x-1/2 opacity-0 "
+        >
+          <div class="shadow rounded-lg my-2 bg-gray-50 text-sm overflow-hidden" v-if="open.submenu.publication">
+                  <a href="#" class="hover:text-white hover:bg-blue-500 px-4 py-2  font-semibold  block">Messages</a>
+                  <a href="#" class="hover:text-white hover:bg-blue-500 px-4 py-2  font-semibold block">Jobs</a>
+                  <a href="#" class="hover:text-white hover:bg-blue-500 px-4 py-2  font-semibold block">Evenements</a>
+                  <a href="#" class="hover:text-white hover:bg-blue-500 px-4 py-2  font-semibold block">Annonces</a>
+          </div>
+          </Transition>
+        </li>
+        <li class="relative py-1 px-6 w-full">
+          <div @click="open.submenu.profil = !open.submenu.profil" class="cursor-pointer p-2 text-left font-semibold flex justify-between w-full items-center  text-gray-500 hover:bg-blue-500 hover:text-white">
+            <span>Profils</span>  
+            <span class="">
+              <ChevronDownIcon v-if="!open.submenu.profil" class="h-4 w-4" />
+              <ChevronUpIcon v-else class="h-4 w-4" />
+             </span>
+          </div>
+          <Transition
+            enter-active-class="transition duration-500"
+            enter-from-class="opacity-0 -translate-x-full absolute"
+            enter-to-class="opacity-1 translate-x-0"
+            leave-active-class="transition duration-500"
+            leave-from-class="opacity-1/2 translate-x-0"
+            leave-to-class="translate-x-1/2 opacity-0 "
+        >
+          <div class="shadow rounded-lg my-2 bg-gray-50 text-sm overflow-hidden" v-if="open.submenu.profil">
+                  <a href="#" class="hover:text-white hover:bg-blue-500 px-4 py-2  font-semibold block">Fidèle</a>
+                  <a href="#" class="hover:text-white hover:bg-blue-500 px-4 py-2  font-semibold block">Chargé Paroissial</a>
+                  <a href="#" class="hover:text-white hover:bg-blue-500 px-4 py-2  font-semibold block">Groupe de Prière</a>
+                  <a href="#" class="hover:text-white hover:bg-blue-500 px-4 py-2  font-semibold block">Diocèse</a>
+                  <a href="#" class="hover:text-white hover:bg-blue-500 px-4 py-2 rounded-b-lg  font-semibold block">Siège</a>
+          </div>
+          </Transition>
+        </li>
+        <li class="py-1 px-6 w-full"><router-link :to="{name:'home'}" class="cursor-pointer p-2  text-left block font-semibold text-gray-500 hover:bg-blue-500 focus:bg-blue-500 w-full hover:text-white">Paroisses</router-link></li>
+        <li class="relative py-1 px-6 w-full">
+          <div @click="open.submenu.multimedia = !open.submenu.multimedia" class="cursor-pointer p-2 text-left font-semibold flex justify-between w-full items-center  text-gray-500 hover:bg-blue-500 hover:text-white">
+            <span>Multimédia</span>  
+            <span class="">
+              <ChevronDownIcon v-if="!open.submenu.multimedia" class="h-4 w-4" />
+              <ChevronUpIcon v-else class="h-4 w-4" />
+             </span>
+            </div>
+            <Transition
+            enter-active-class="transition duration-500"
+            enter-from-class="opacity-0 -translate-x-full absolute"
+            enter-to-class="opacity-1 translate-x-0"
+            leave-active-class="transition duration-500"
+            leave-from-class="opacity-1/2 translate-x-0"
+            leave-to-class="translate-x-1/2 opacity-0 "
+        >
+            <div class="shadow rounded-lg my-2 bg-gray-50 text-sm overflow-hidden" v-if="open.submenu.multimedia">
+                  <a href="#" class="hover:text-white hover:bg-blue-500 px-4 py-2  font-semibold block">Audio</a>
+                  <a href="#" class="hover:text-white hover:bg-blue-500 px-4 py-2 rounded-b-lg  font-semibold block">Video</a>
+          </div>
+          </Transition>
+        </li>
+        <li class="relative w-full py-1 px-6">
+          <div @click="open.submenu.cantiques = !open.submenu.cantiques" class="cursor-pointer p-2 text-left font-semibold flex justify-between w-full items-center  text-gray-500 hover:bg-blue-500 hover:text-white">
+            <span>Cantiques</span>  
+             <span class="">
+              <ChevronDownIcon v-if="!open.submenu.cantiques" class="h-4 w-4" />
+              <ChevronUpIcon v-else class="h-4 w-4" />
+             </span>
+            </div>
+            <Transition
+            enter-active-class="transition duration-500"
+            enter-from-class="opacity-0 -translate-x-full absolute"
+            enter-to-class="opacity-1 translate-x-0"
+            leave-active-class="transition duration-500"
+            leave-from-class="opacity-1/2 translate-x-0"
+            leave-to-class="translate-x-1/2 opacity-0 "
+        >
+          <div class="shadow rounded-lg my-2 bg-gray-50 text-sm overflow-hidden" v-if="open.submenu.cantiques">
+                  <a href="#" class="hover:text-white hover:bg-blue-500 px-4 py-2  font-semibold block">Audios</a>
+                  <a href="#" class="hover:text-white hover:bg-blue-500 px-4 py-2  font-semibold block">Playlists</a>
+                  <a href="#" class="hover:text-white hover:bg-blue-500 px-4 py-2 rounded-b-lg  font-semibold block">Partitions</a>
+          </div>
+          </Transition>
+        </li>
+        <li class="py-1 px-6 w-full"><router-link :to="{name:'home'}" class="cursor-pointer p-2  text-left block font-semibold text-gray-500 hover:bg-blue-500 focus:bg-blue-500 w-full hover:text-white">Formations</router-link></li>
+        <li class="relative py-1 px-6 w-full">
+          <div @click="open.submenu.document = !open.submenu.document" class="cursor-pointer p-2 text-left font-semibold flex justify-between w-full items-center  text-gray-500 hover:bg-blue-500 hover:text-white">
+            <span>Documents</span>  
+            <span class="">
+              <ChevronDownIcon v-if="!open.submenu.document" class="h-4 w-4" />
+              <ChevronUpIcon v-else class="h-4 w-4" />
+             </span>
+            </div>
+            <Transition
+            enter-active-class="transition duration-500"
+            enter-from-class="opacity-0 -translate-x-full absolute"
+            enter-to-class="opacity-1 translate-x-0"
+            leave-active-class="transition duration-500"
+            leave-from-class="opacity-1/2 translate-x-0"
+            leave-to-class="translate-x-1/2 opacity-0 "
+        >
+          <div class="shadow rounded-lg my-2 bg-gray-50 text-sm overflow-hidden" v-if="open.submenu.document">
+                  <a href="#" class="hover:text-white hover:bg-blue-500 px-4 py-2  font-semibold block">Livres</a>
+                  <a href="#" class="hover:text-white hover:bg-blue-500 px-4 py-2 rounded-b-lg  font-semibold block">Documents officiels</a>
+          </div>
+          </Transition>
+        </li>
+        <li class="py-1 px-6 w-full"><router-link :to="{name:'contact'}" class="cursor-pointer p-2  text-left block font-semibold text-gray-500 hover:bg-blue-500 focus:bg-blue-500 w-full hover:text-white">Contact</router-link></li>     
+      </ul> 
+      <div class="text-sm w-full px-4">
+        <a href="#" class="py-2 px-4 block text-center rounded-lg bg-blue-500 text-white font-semibold">Rejoindre la communauté</a>
+        <a href="#" class="py-2 px-4 block text-center text-blue-500  font-semibold md:mx-4">Se Connecter</a>
+      </div> 
+    </nav>
+    </Transition>
+   
+  </header>
 </template>

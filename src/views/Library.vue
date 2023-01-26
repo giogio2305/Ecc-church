@@ -4,7 +4,6 @@ import SiteNavigation from '../components/SiteNavigation.vue';
 import Footer from '../components/Footer.vue';
 </script>
 <template>
-    <SiteNavigation/>
     <div class="flex flex-col min-h-screen bg-slate-100">
         
         <div class="relative w-full h-[60vh] bg-[url('../assets/library.jpg')] bg-cover bg-no-repeat bg-center flex flex-col items-start justify-end">
@@ -96,6 +95,5 @@ import Footer from '../components/Footer.vue';
 </div>
 </div>
 
-<Footer/>
     </div>
 </template>

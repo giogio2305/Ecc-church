@@ -1,10 +1,10 @@
 <script setup></script>
 <template>
-    <div class="md:flex flex-col md:flex-row items-center justify-start w-[96%] mx-auto md:h-[100vh] bg-white p-1 mb-10">
+    <div class="md:flex flex-col md:flex-row items-center justify-start w-[96%] mx-auto md:h-[80vh] bg-white p-1 mb-10">
 
-            <div class="flex flex-col w-[84%] md:w-[23%] h-full">
-                <div class="flex flex-col m-6">
-                    <div class="h-36 w-[88%] md:w-64 overflow-clip rounded-md">
+            <div class="flex flex-col w-full md:w-[23%] h-full">
+                <div class="flex flex-col p-6 w-full">
+                    <div class="h-36 w-full overflow-clip rounded-md">
                         <img src="../assets/flct.jpg" class="w-full h-full object-cover"/>
                     </div>
                     <h2 class="font-semibold text-2xl my-3">Le secret pour une spiritualité accomplie.</h2>
@@ -19,8 +19,8 @@
                 </div>
 
 
-                <div class="flex flex-col m-6">
-                    <div class="h-36 w-64 overflow-clip rounded-md">
+                <div class="flex flex-col p-6 w-full">
+                    <div class="h-36 w-full overflow-clip rounded-md">
                         <img src="../assets/slct.jpg" class="w-full h-full object-cover"/>
                     </div>
                     <h2 class="font-semibold text-2xl my-3">La meilleure facon de lire les saintes écritures.</h2>
@@ -36,7 +36,7 @@
             </div>
 
             <div class="relative flex items-center justify-center w-full md:w-[54%] h-full">
-                <div class="h-[96%] w-[96%] rounded-md overflow-clip">
+                <div class="h-[96%] w-full rounded-md overflow-clip">
                     <img src="../assets/mct.jpg" class="w-full h-full object-cover"/>
                 </div>
                 <div class=" absolute bottom-0 flex flex-col items-center justify-center w-[88%] min-h-[12%] md:min-h-[28%] p-6 rounded-t-md bg-white">
@@ -55,9 +55,11 @@
                     </p>
                 </div>
             </div>
-            <div class="flex flex-col w-[84%] md:w-[23%] h-full">
-                <div class="flex flex-col m-6">
-                    <div class="h-36 w-[88%] md:w-64 overflow-clip rounded-md">
+
+
+            <div class="flex flex-col md:w-[23%] w-full h-full">
+                <div class="flex flex-col p-6  ">
+                    <div class="h-36 w-full overflow-clip rounded-md">
                         <img src="../assets/flct.jpg" class="w-full h-full object-cover"/>
                     </div>
                     <h2 class="font-semibold text-2xl my-3">Le secret pour une spiritualité accomplie.</h2>
@@ -72,8 +74,8 @@
                 </div>
 
 
-                <div class="flex flex-col m-6">
-                    <div class="h-36 w-[88%] md:w-64 overflow-clip rounded-md">
+                <div class="flex flex-col p-6 ">
+                    <div class="h-36 w-full   overflow-clip rounded-md">
                         <img src="../assets/slct.jpg" class="w-full h-full object-cover"/>
                     </div>
                     <h2 class="font-semibold text-2xl my-3">La meilleure facon de lire les saintes écritures.</h2>

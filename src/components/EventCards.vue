@@ -2,7 +2,7 @@
 import { RouterLink, RouterView } from 'vue-router'
 </script>
 <template>
-    <div class="relative flex items-center justify-start p-4 w-[88%] mx-auto mt-[28px] bg-gray-100 my-8">
+    <div class="relative flex items-center lg:flex-row flex-col justify-start p-4 w-[88%] mx-auto mt-[28px] bg-gray-100 my-8">
         <div class="flex items-center justify-center mr-4  w-40 h-40 rounded-full bg-rose-700 text-white">
             <h1 class="text-xl text-center font-semibold">Evenements à venir</h1>
         </div>
