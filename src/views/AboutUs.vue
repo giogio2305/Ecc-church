@@ -1,4 +1,4 @@
-<script setup>
+
 <template>
 <div class="w-full min-h-screen bg-white m-0 p-0">
         <div class="w-full flex items-center justify-center h-48 bg-blue-300/70">
