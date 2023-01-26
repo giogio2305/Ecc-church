@@ -1,7 +1,4 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import SiteNavigation from '../components/SiteNavigation.vue';
-import Footer from '../components/Footer.vue';
 </script>
 
 <template>
