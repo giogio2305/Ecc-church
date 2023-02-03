@@ -103,6 +103,24 @@ const router = createRouter({
         footer: Footer,
       }
     },
+    {
+      path: '/login',
+      name: 'login',
+      components: {
+        default: () => import('../views/Login.vue'),
+        header: Header,
+        footer: Footer,
+      }
+    },
+    {
+      path: '/inscription',
+      name: 'sign in',
+      components: {
+        default: () => import('../views/Sign.vue'),
+        header: Header,
+        footer: Footer,
+      }
+    },
   ]
 })
 

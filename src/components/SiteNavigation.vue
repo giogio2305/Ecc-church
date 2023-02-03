@@ -35,8 +35,8 @@ let open = reactive({
       </div>
 
       <div class=" lg:flex xl:text-base text-sm hidden w-2/6 px-4 items-center justify-end">
-        <a href="#" class="py-2 px-4 text-center rounded-lg bg-red-500 text-white font-semibold">Rejoindre la communauté</a>
-        <a href="#" class="py-2 px-4  text-center text-red-500  font-semibold md:mx-4">Se Connecter</a>
+        <a href="/inscription" class="py-2 text-base px-4 text-center rounded-lg bg-gradient-to-r from-blue-500 via-blue-600 to-blue-500 text-white font-semibold">Rejoindre la communauté</a>
+        <a href="/login" class="py-2 px-4  text-center text-yellow-500  font-semibold md:mx-4">Connexion</a>
       </div> 
 
       <div @click="open.menu = !open.menu" class="lg:hidden block">
