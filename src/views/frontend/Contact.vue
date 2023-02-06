@@ -13,7 +13,7 @@ const titre = ref("Contactez-nous !");
         <div class="flex items-center justify-center w-full h-auto my-20">
 
 
-            <div class="relative flex flex-col items-center justify-center w-[calc(100%/4)] h-auto px-8 py-16 rounded-3xl overflow-clip bg-[url('../assets/abt.jpg')] bg-cover bg-no-repeat">
+            <div class="relative flex flex-col items-center justify-center w-[calc(100%/4)] h-auto px-8 py-16 rounded-3xl overflow-clip bg-[url('../../assets/abt.jpg')] bg-cover bg-no-repeat">
                 <div class="absolute inset-0 bg-red-600/90 w-full h-full"></div>
                 <div class="relative flex flex-col items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-white">
@@ -27,7 +27,7 @@ const titre = ref("Contactez-nous !");
             </div>
 
 
-            <div class="relative flex flex-col items-center justify-center w-[calc(100%/4)] h-auto px-8 py-16 rounded-3xl overflow-clip bg-[url('../assets/abt.jpg')] bg-cover bg-no-repeat mx-12">
+            <div class="relative flex flex-col items-center justify-center w-[calc(100%/4)] h-auto px-8 py-16 rounded-3xl overflow-clip bg-[url('../../assets/abt.jpg')] bg-cover bg-no-repeat mx-12">
                 <div class="absolute inset-0 bg-zinc-900/80 w-full h-full"></div>
                 <div class="relative flex flex-col items-center justify-center">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-white">
@@ -43,7 +43,7 @@ const titre = ref("Contactez-nous !");
                 </div>
             </div>
 
-            <div class="relative flex flex-col items-center justify-center w-[calc(100%/4)] h-auto px-8 py-16 rounded-3xl overflow-clip bg-[url('../assets/abt.jpg')] bg-cover bg-no-repeat">
+            <div class="relative flex flex-col items-center justify-center w-[calc(100%/4)] h-auto px-8 py-16 rounded-3xl overflow-clip bg-[url('../../assets/abt.jpg')] bg-cover bg-no-repeat">
                 <div class="absolute inset-0 bg-zinc-900/80 w-full h-full"></div>
                 <div class="relative flex flex-col items-center justify-center">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-white">
@@ -73,7 +73,7 @@ const titre = ref("Contactez-nous !");
                         </div>
             </div>
             <div class="w-[35%] h-[400px]">
-                <img src="../assets/abt.jpg" class="w-full h-full object-cover"/>
+                <img src="../../assets/abt.jpg" class="w-full h-full object-cover"/>
             </div>
             
         </div>

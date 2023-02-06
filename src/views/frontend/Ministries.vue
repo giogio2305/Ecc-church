@@ -1,8 +1,5 @@
 <script setup>
-import router from '../../router'
-import { RouterLink, RouterView } from 'vue-router'
-import SiteNavigation from '../../components/SiteNavigation.vue';
-import Footer from '../../components/Footer.vue';
+
 import HeadBanner from '../../components/HeadBanner.vue';</script>
 <template>
 <div class="w-full min-h-screen bg-white m-0 p-0">
@@ -11,7 +8,7 @@ import HeadBanner from '../../components/HeadBanner.vue';</script>
         <div class="flex w-full h-auto">
             <div class="flex flex-col items-center justify-center w-[68%] min-h-[540px] bg-white p-3">
                 <div class="w-[92%] h-[480px] overflow-clip rounded-lg my-10">
-                <img src="../assets/bc3.jpg" class="object-cover h-full w-full"/>
+                <img src="../../assets/bc3.jpg" class="object-cover h-full w-full"/>
             </div>
 
             <p class="w-[92%] text-lg text-zinc-600 tracking-wide text-justify leading-wide my-10"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae provident blanditiis cupiditate iusto illum, fugiat ea modi sequi facilis quas eaque unde maxime officiis! Quasi perferendis aliquid natus quaerat! Distinctio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam cum obcaecati nulla corrupti expedita eos id, veritatis fuga error nostrum ipsam optio fugit deserunt omnis. Cum neque amet hic beatae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste laudantium cumque deserunt quaerat harum eius atque eum assumenda quo corporis! Laborum molestias magni impedit nesciunt enim mollitia maxime alias tenetur!</p>
@@ -20,15 +17,15 @@ import HeadBanner from '../../components/HeadBanner.vue';</script>
             <div class=" flex items-center justify-around w-[92%] my-12">
 
                 <div class="w-[calc(92%/3)] h-[140px] overflow-clip rounded-lg">
-                <img src="../assets/bc3.jpg" class="object-cover h-full w-full"/>
+                <img src="../../assets/bc3.jpg" class="object-cover h-full w-full"/>
             </div>
 
             <div class="w-[calc(92%/3)] h-[140px] overflow-clip rounded-lg">
-                <img src="../assets/bc3.jpg" class="object-cover h-full w-full"/>
+                <img src="../../assets/bc3.jpg" class="object-cover h-full w-full"/>
             </div>
 
             <div class="w-[calc(92%/3)] h-[140px] overflow-clip rounded-lg">
-                <img src="../assets/bc3.jpg" class="object-cover h-full w-full"/>
+                <img src="../../assets/bc3.jpg" class="object-cover h-full w-full"/>
             </div>
             </div>
 
@@ -69,7 +66,7 @@ import HeadBanner from '../../components/HeadBanner.vue';</script>
                     <div class="flex flex-col">
                         <div class="flex items-center justify-center my-3 h-[68%]">
                     <div class="w-28 h-16 overflow-clip rounded-md mr-3">
-                        <img src="../assets/bc2.jpg" class="w-full h-full object-cover "/>
+                        <img src="../../assets/bc2.jpg" class="w-full h-full object-cover "/>
                     </div>
                     <div class="flex flex-col">
                         <h3 class="font-semibold text-zinc-800 text-base w-[92%]">L'Esprit Du Seigneur Est, De La Nouvelle Vie.</h3>
@@ -86,7 +83,7 @@ import HeadBanner from '../../components/HeadBanner.vue';</script>
 
                         <div class="flex items-center justify-center my-3 h-[68%]">
                     <div class="w-28 h-16 overflow-clip rounded-md mr-3">
-                        <img src="../assets/bc1.jpg" class="w-full h-full object-cover "/>
+                        <img src="../../assets/bc1.jpg" class="w-full h-full object-cover "/>
                     </div>
                     <div class="flex flex-col ">
                         <h3 class="font-semibold text-zinc-800 text-base w-[92%]">Donner en retour - Centres de formation en Ouganda.</h3>
@@ -102,7 +99,7 @@ import HeadBanner from '../../components/HeadBanner.vue';</script>
 
                 <div class="flex items-center justify-center my-3 h-[68%]">
                     <div class="w-28 h-16 overflow-clip rounded-md mr-3">
-                        <img src="../assets/bc1.jpg" class="w-full h-full object-cover "/>
+                        <img src="../../assets/bc1.jpg" class="w-full h-full object-cover "/>
                     </div>
                     <div class="flex flex-col ">
                         <h3 class="font-semibold text-zinc-800 text-base w-[92%]">Donner en retour - Centres de formation en Ouganda.</h3>
@@ -146,7 +143,7 @@ import HeadBanner from '../../components/HeadBanner.vue';</script>
                     <div class="flex flex-col">
                         <div class="flex items-center justify-center my-3 h-[68%]">
                     <div class="w-28 h-16 overflow-clip rounded-md mr-3">
-                        <img src="../assets/bc2.jpg" class="w-full h-full object-cover "/>
+                        <img src="../../assets/bc2.jpg" class="w-full h-full object-cover "/>
                     </div>
                     <div class="flex flex-col">
                         <h3 class="font-semibold text-zinc-800 text-base w-[92%]">L'Esprit Du Seigneur Est, De La Nouvelle Vie.</h3>
@@ -163,7 +160,7 @@ import HeadBanner from '../../components/HeadBanner.vue';</script>
 
                         <div class="flex items-center justify-center my-3 h-[68%]">
                     <div class="w-28 h-16 overflow-clip rounded-md mr-3">
-                        <img src="../assets/bc1.jpg" class="w-full h-full object-cover "/>
+                        <img src="../../assets/bc1.jpg" class="w-full h-full object-cover "/>
                     </div>
                     <div class="flex flex-col ">
                         <h3 class="font-semibold text-zinc-800 text-base w-[92%]">Donner en retour - Centres de formation en Ouganda.</h3>
@@ -179,7 +176,7 @@ import HeadBanner from '../../components/HeadBanner.vue';</script>
 
                 <div class="flex items-center justify-center my-3 h-[68%]">
                     <div class="w-28 h-16 overflow-clip rounded-md mr-3">
-                        <img src="../assets/bc1.jpg" class="w-full h-full object-cover "/>
+                        <img src="../../assets/bc1.jpg" class="w-full h-full object-cover "/>
                     </div>
                     <div class="flex flex-col ">
                         <h3 class="font-semibold text-zinc-800 text-base w-[92%]">Donner en retour - Centres de formation en Ouganda.</h3>
