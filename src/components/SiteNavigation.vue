@@ -35,8 +35,8 @@ let open = reactive({
       </div>
 
       <div class=" lg:flex xl:text-base text-sm hidden w-2/6 px-4 items-center justify-end">
-        <a href="/inscription" class="py-2 text-base px-4 text-center rounded-lg bg-gradient-to-r from-blue-500 via-blue-600 to-blue-500 text-white font-semibold">Rejoindre la communauté</a>
-        <a href="/login" class="py-2 px-4  text-center text-yellow-500  font-semibold md:mx-4">Connexion</a>
+        <router-link :to="{name:'register'}" class="py-2 text-base px-4 text-center rounded-lg bg-gradient-to-r bg-red-500 text-white font-semibold">Rejoindre la communauté</router-link>
+        <router-link :to="{name:'login'}"  class="py-2 px-4  text-center text-red-500  font-semibold md:mx-4">Connexion</router-link>
       </div> 
 
       <div @click="open.menu = !open.menu" class="lg:hidden block">
@@ -75,7 +75,7 @@ let open = reactive({
               <ChevronUpIcon class="h-4 w-4 hidden group-hover:block transition-all duration-500" />
              </span>
           </div>
-          <div class="absolute z-10 hidden bg-white w-52 shadow top-full left-0 rounded-b-lg text-base  group-hover:block">
+          <div class="absolute z-20 hidden bg-white w-52 shadow top-full left-0 rounded-b-lg text-base  group-hover:block">
                   <a href="#" class="hover:text-white hover:bg-red-500 px-4 py-2  font-semibold block">Fidèle</a>
                   <a href="#" class="hover:text-white hover:bg-red-500 px-4 py-2  font-semibold block">Chargé Paroissial</a>
                   <a href="#" class="hover:text-white hover:bg-red-500 px-4 py-2  font-semibold block">Groupe de Prière</a>
@@ -92,7 +92,7 @@ let open = reactive({
               <ChevronUpIcon class="h-4 w-4 hidden group-hover:block transition-all duration-500" />
              </span>
           </div>
-          <div class="absolute z-10 hidden bg-white w-52 shadow top-full left-0 rounded-b-lg text-base  group-hover:block">
+          <div class="absolute z-20 hidden bg-white w-52 shadow top-full left-0 rounded-b-lg text-base  group-hover:block">
                   <router-link :to="{name:'multimedia'}" class="hover:text-white hover:bg-red-500 px-4 py-2  font-semibold block">Audio</router-link>
                   <router-link :to="{name:'multimedia'}" class="hover:text-white hover:bg-red-500 px-4 py-2 rounded-b-lg  font-semibold block">Video</router-link>
           </div>
@@ -105,7 +105,7 @@ let open = reactive({
               <ChevronUpIcon class="h-4 w-4 hidden group-hover:block transition-all duration-500" />
              </span>
           </div>
-          <div class="absolute z-10 hidden bg-white w-52 shadow top-full left-0 rounded-b-lg text-base  group-hover:block">
+          <div class="absolute z-20 hidden bg-white w-52 shadow top-full left-0 rounded-b-lg text-base  group-hover:block">
                   <router-link :to="{name:'cantique'}" class="hover:text-white hover:bg-red-500 px-4 py-2  font-semibold block">Audios</router-link>
                   <router-link :to="{name:'cantique'}" class="hover:text-white hover:bg-red-500 px-4 py-2  font-semibold block">Playlists</router-link>
                   <router-link :to="{name:'cantique'}" class="hover:text-white hover:bg-red-500 px-4 py-2 rounded-b-lg  font-semibold block">Partitions</router-link>
@@ -120,7 +120,7 @@ let open = reactive({
               <ChevronUpIcon class="h-4 w-4 hidden group-hover:block transition-all duration-500" />
              </span>
           </div>
-          <div class="absolute z-10 hidden bg-white w-52 shadow top-full left-0 rounded-b-lg text-base  group-hover:block">
+          <div class="absolute z-20 hidden bg-white w-52 shadow top-full left-0 rounded-b-lg text-base  group-hover:block">
                   <router-link :to="{name:'library'}" class="hover:text-white hover:bg-red-500 px-4 py-2  font-semibold block">Livres</router-link>
                   <router-link :to="{name:'library'}" class="hover:text-white hover:bg-red-500 px-4 py-2 rounded-b-lg  font-semibold block">Documents officiels</router-link>
           </div>

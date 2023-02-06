@@ -8,7 +8,7 @@ const router = createRouter({
       path: '/',
       name: 'home',
       components: {
-        default: () => import('../views/Home.vue'),
+        default: () => import('../views/frontend/Home.vue'),
         header: Header,
         footer: Footer,
       },
@@ -17,7 +17,7 @@ const router = createRouter({
       path: '/cantiques',
       name: 'cantique',
       components: {
-        default: () => import('../views/Cantiques.vue'),
+        default: () => import('../views/frontend/Cantiques.vue'),
         header: Header,
         footer: Footer,
       },
@@ -26,7 +26,7 @@ const router = createRouter({
       path: '/evenement',
       name: 'evenement',
       components: {
-        default: () => import('../views/Event.vue'),
+        default: () => import('../views/frontend/Event.vue'),
         header: Header,
         footer: Footer,
       }
@@ -35,7 +35,7 @@ const router = createRouter({
       path: '/ecc',
       name: 'about-us',
       components: {
-        default: () => import('../views/AboutUs.vue'),
+        default: () => import('../views/frontend/AboutUs.vue'),
         header: Header,
         footer: Footer,
       }
@@ -44,7 +44,7 @@ const router = createRouter({
       path: '/ministry',
       name: 'ministry',
       components: {
-        default:() => import('../views/Ministries.vue'),
+        default:() => import('../views/frontend/Ministries.vue'),
         header: Header,
         footer: Footer,
       }
@@ -53,7 +53,7 @@ const router = createRouter({
       path: '/contact',
       name: 'contact',
       components: {
-        default: () => import('../views/Contact.vue'),
+        default: () => import('../views/frontend/Contact.vue'),
         header: Header,
         footer: Footer,
       }
@@ -62,7 +62,7 @@ const router = createRouter({
       path: '/article',
       name: 'article',
       components: {
-        default:() => import('../views/Article.vue'),
+        default:() => import('../views/frontend/Article.vue'),
         header: Header,
         footer: Footer,
       }
@@ -71,7 +71,7 @@ const router = createRouter({
       path: '/library',
       name: 'library',
       components: {
-        default: () => import('../views/Library.vue'),
+        default: () => import('../views/frontend/Library.vue'),
         header: Header,
         footer: Footer,
       }
@@ -80,7 +80,7 @@ const router = createRouter({
       path: '/multimedias',
       name: 'multimedia',
       components: {
-          default: () => import('../views/Media.vue'),
+          default: () => import('../views/frontend/Media.vue'),
           header: Header,
           footer: Footer,
         }
@@ -89,7 +89,7 @@ const router = createRouter({
       path: '/paroisses',
       name: 'paroisses',
       components: {
-        default: () => import('../views/Map.vue'),
+        default: () => import('../views/frontend/Map.vue'),
         header: Header,
         footer: Footer,
       }
@@ -98,7 +98,7 @@ const router = createRouter({
       path: '/calendrier',
       name: 'calendrier',
       components: {
-        default: () => import('../views/Calendar.vue'),
+        default: () => import('../views/frontend/Calendar.vue'),
         header: Header,
         footer: Footer,
       }
@@ -107,36 +107,55 @@ const router = createRouter({
       path: '/jobs',
       name: 'jobs',
       components: {
-        default: () => import('../views/Jobs.vue'),
+        default: () => import('../views/frontend/Jobs.vue'),
         header: Header,
         footer: Footer,
-      }
-    },
-    {
-      path: '/admin/dashboard',
-      name: 'dashboard',
-      components: {
-        default: () => import('../views/backend/Dashboard.vue'),
       }
     },
     {
       path: '/login',
       name: 'login',
       components: {
-        default: () => import('../views/Login.vue'),
+        default: () => import('../views/frontend/Login.vue'),
         header: Header,
         footer: Footer,
       }
     },
     {
-      path: '/inscription',
-      name: 'sign in',
+      path: '/register',
+      name: 'register',
       components: {
-        default: () => import('../views/Sign.vue'),
+        default: () => import('../views/frontend/Register.vue'),
         header: Header,
         footer: Footer,
       }
     },
+    {
+      path: "/:pathMatch(.*)",
+      name: "not.found",
+      component: () => import("../views/NotFound.vue"),
+  },
+    {
+      path: '/admin',
+      components: {
+        default: () => import('../views/backend/ChildrenHome.vue'),
+        sidebar: () => import('../components/Sidebar.vue'),
+        header: () => import('../components/DashHeader.vue'),
+      },
+      children: [
+          {
+            path: "",
+            component: () => import("../views/backend/Dashboard.vue"),
+            name: "dashboard",
+        },
+        {
+          path: "dashboard",
+          component: () => import("@/views/back/Dashboard.vue"),
+          name: "",
+        },
+      ]
+    },
+   
   ]
 })
 
