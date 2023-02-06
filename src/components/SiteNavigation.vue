@@ -62,7 +62,7 @@ let open = reactive({
           </div>
           <div class="absolute z-50 hidden bg-white w-52 shadow top-full left-0 rounded-b-lg text-base  group-hover:block">
                   <router-link :to="{name:'article'}"  class="hover:text-white hover:bg-red-500 px-4 py-2  font-semibold block">Messages</router-link>
-                  <a href="#" class="hover:text-white hover:bg-red-500 px-4 py-2  font-semibold block">Jobs</a>
+                  <a href="/jobs" class="hover:text-white hover:bg-red-500 px-4 py-2  font-semibold block">Jobs</a>
                   <router-link :to="{name:'calendrier'}" class="hover:text-white hover:bg-red-500 px-4 py-2  font-semibold block">Evenements</router-link>
                   <a href="#" class="hover:text-white hover:bg-red-500 px-4 py-2 rounded-b-lg  font-semibold block">Annonces</a>
           </div>

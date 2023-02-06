@@ -104,6 +104,22 @@ const router = createRouter({
       }
     },
     {
+      path: '/jobs',
+      name: 'jobs',
+      components: {
+        default: () => import('../views/Jobs.vue'),
+        header: Header,
+        footer: Footer,
+      }
+    },
+    {
+      path: '/admin/dashboard',
+      name: 'dashboard',
+      components: {
+        default: () => import('../views/backend/Dashboard.vue'),
+      }
+    },
+    {
       path: '/login',
       name: 'login',
       components: {
