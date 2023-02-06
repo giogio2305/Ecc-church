@@ -143,15 +143,10 @@ const router = createRouter({
         header: () => import('../components/DashHeader.vue'),
       },
       children: [
-          {
-            path: "",
-            component: () => import("../views/backend/Dashboard.vue"),
-            name: "dashboard",
-        },
         {
-          path: "dashboard",
-          component: () => import("@/views/back/Dashboard.vue"),
-          name: "",
+          path: "",
+          component: () => import("../views/backend/Dashboard.vue"),
+          name: "dashboard",
         },
       ]
     },
