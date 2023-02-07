@@ -1,4 +1,26 @@
 <script setup>
+import { onMounted, reactive, ref } from 'vue';
+import useRoles from '@/composables/useRoles';
+import useAuth from '@/composables/useAuth';
+import { EyeIcon, EyeSlashIcon } from "@heroicons/vue/24/solid"
+
+const showPassword = ref(false);
+const { getRoles, roles, } = useRoles();
+const { errors, loading } = useAuth();
+const user = reactive({
+    username: '',
+    lastname: '',
+    email: '',
+    password: '',
+    parishOfficial: 0,
+    role: 1
+})
+
+onMounted(async () => {
+    await getRoles();
+});
+
+
 </script>
 
 <template>
@@ -12,21 +34,52 @@
 
             <div class="flex flex-col items-center justify-center p-3 w-full max-w-xl bg-white shadow-md rounded-lg my-8">
                 <form class="flex flex-col w-full py-3 px-4">
-                    <label class="my-3">Type de profil</label>
-                    <select class="form-select p-2 outline-none border border-gray-300 rounded-lg shadow-sm">
-                        <option>Fidèle</option>
-                        <option>Chargé Paroissial</option>
-                        <option>Groupe de Prière</option>
-                        <option>Diocèse</option>
-                        <option>Siège</option>
-                    </select>
-                    <label class="my-3">Nom d'utilisateur</label>
-                    <input class="border-gray-300 border form-input p-2 outline-none rounded-lg shadow-sm" type="text" placeholder="Ex: Marc Emmanuel"/>
-                    <label class="my-3">Adresse mail</label>
-                    <input class="border-gray-300 border form-input p-2 outline-none rounded-lg shadow-sm" type="text" placeholder="Ex: nom@xyz.com"/>
-                    <label class="my-3">Mot de passe</label>
-                    <input class="border-gray-300 border form-input p-2 outline-none rounded-lg shadow-sm" type="text" placeholder="8+ caracteres"/>
-                    <input class="p-2 mt-10 rounded-lg bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold" type="submit" value="S'inscrire"/>
+                    <div class="w-full">
+                        <label class="">Type de profil</label>
+                        <select v-model="user.role" class="form-select p-2 outline-none mt-1 border block border-gray-300 rounded-lg shadow-sm w-full">
+                            <template v-for="role in roles"  :key="role.id">
+                                <option v-if="role.name != 'Public' && role.name != 'Admin'" :value="role.id">{{ role.name }}</option>
+                            </template>
+                        </select>
+                    </div>
+                    <div class="w-full mt-3">
+                        <label class="">
+                            <span v-if="user.role == 1">Nom du Fidele</span>
+                            <span v-else-if="user.role == 5">Nom de la  Paroisse</span>
+                            <span v-else-if="user.role == 4">Nom du groupe de prière </span>
+                            <span v-else-if="user.role == 6">Nom du diocèse </span>
+                            <span v-else-if="user.role == 7">Nom du Siège </span>
+                        </label>
+                        <input v-model="user.username" class="border-gray-300 mt-1 border form-input p-2 outline-none block rounded-lg shadow-sm w-full" type="text" placeholder="Ex: Marc"/>
+                    </div>
+                    <div class="w-full mt-3" v-if="user.role == 1">
+                        <label class="">Prénom du Fidele</label>
+                        <input v-model="user.lastname" class="border-gray-300 mt-1 border form-input p-2 outline-none block rounded-lg shadow-sm w-full" type="text" placeholder="Ex: Emmanuel"/>
+                    </div>
+                    <div class="w-full mt-3" v-if="user.role == 1">
+                        <label class="">Chargé paroissial</label>
+                        <div class=" flex mt-1 items-center space-x-2">
+                            <input type="radio" class="form-radio border-gray-300" id="yes" v-model="user.parishOfficial" :value="{number: 1}">
+                            <label for="yes">Oui</label>
+                            <input type="radio" class="form-radio border-gray-300" id="no" v-model="user.parishOfficial"  :value="{number: false}">
+                            <label for="no">Non</label>
+                        </div>
+                    </div>
+                    <div class="w-full mt-3">
+                        <label class="">Adresse mail</label>
+                        <input v-model="user.email" class="border-gray-300 border form-input p-2 mt-1 outline-none block rounded-lg shadow-sm w-full" type="text" placeholder="Ex: nom@xyz.com"/>
+                    </div>
+                    <div class="w-full mt-3">
+                        <label class="">Mot de passe</label>
+                        <div class="relative mt-1">
+                            <input v-model="user.password" class="border-gray-300 border form-input py-2 pr-10 outline-none block rounded-lg shadow-sm w-full" :type="showPassword ? 'text' :'password'" placeholder="8+ caracteres"/>
+                            <span class=" absolute top-3 right-4 cursor-pointer" @click="showPassword = !showPassword">
+                                <EyeIcon v-if="!showPassword" class="w-5 h-5 text-gray-500" />
+                                <EyeSlashIcon v-else class="w-5 h-5 text-gray-500" />
+                            </span>
+                        </div>
+                    </div>
+                    <input class="p-2 mt-8 rounded-lg bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold cursor-pointer" type="submit" value="S'inscrire"/>
                     <p class=" mt-4 text-sm text-center ">Déjà un compte ? <router-link :to="{name:'login'}" class="text-blue-500 hover:underline">Connectez vous</router-link> </p>
                 </form>
             </div>
