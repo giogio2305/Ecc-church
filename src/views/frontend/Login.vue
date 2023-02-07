@@ -2,13 +2,12 @@
 import { RouterLink, RouterView } from 'vue-router'
 </script>
 <template>
-    <div class=" w-full min-h-[80vh]  bg-slate-100 relative">
-        <div class="w-full h-full absolute bg-[url('../assets/abt.jpg')] bg-cover bg-center z-0">
-            <div class="w-full h-full bg-black/50"></div>
-        </div>
-        <div class="absolute z-10 w-full h-full top-0 flex flex-col items-center justify-center px-4">
+    <div class=" w-full   bg-slate-100 relative">
+        <div class="w-full h-full  bg-[url('../assets/abt.jpg')] bg-cover bg-center ">
+
+            <div class="bg-black/50 z-10 w-full min-h-[80vh]  flex flex-col items-center justify-center px-4 py-20">
         <div class="text-center">
-            <h1 class="font-bold text-3xl text-white">Connectez-vous à votre compte</h1>
+            <h1 class="font-bold lg:text-3xl text-2xl text-white">Connectez-vous à votre compte</h1>
             <h3 class="flex flex-col items-center text-white text-base my-1">Ou <router-link :to="{name:'register'}" class="text-blue-500 ml-2 hover:underline">Inscrivez vous et rejoignez la communauté.</router-link></h3>
         </div>
 
@@ -26,5 +25,7 @@ import { RouterLink, RouterView } from 'vue-router'
         </form>
     </div>
     </div>
+        </div>
+        
 </div>
 </template>
