@@ -7,7 +7,7 @@ export const useAuthenticateStore = defineStore("authenticate", {
             user: localStorage.user
                 ? JSON.parse(localStorage.user) 
                 : null,
-            token: localStorage.tokenUser ? localStorage.tokenUser : null,
+            tokenUser: localStorage.tokenUser ? localStorage.tokenUser : null,
         };
     },
     actions: {},

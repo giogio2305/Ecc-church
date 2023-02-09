@@ -2,27 +2,39 @@ import { reactive, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 import { axiosClient, axiosClientFile } from "@/axios";
 
-export default function useRoles() {
+export default function useUsers() {
     const errors = ref([]);
     const router = useRouter();
     const route = useRoute();
     const loading = ref(false);
     const isFinish = ref(false);
-    const roles = ref([]);
-    const role = ref([]);
+    const users = ref([]);
+    const user = ref([]);
+    const selectArray = ref([]);
+    const searchField = ref("username");
+    const searchValue = ref("");
+    const headers = [
+       // { text: "Image", value: "avatar" },
+        { text: "Name", value: "username" },
+      //  { text: "Phone", value: "phone" },
+        { text: "Email", value: "email" },
+        { text: "Role", value: "role.id" },
+       { text: "Confirmed", value: "confirmed" },
+        { text: "Action", value: "id" },
+    ];
 
 
     const cleanErrors = () => {
         errors.value = [];
     };
 
-    const getRoles = async () => {
+    const getUsers = async () => {
         errors.value = [];
         loading.value = true;
         await axiosClient
-            .get(`/users-permissions/roles`)
+            .get(`/users?populate=*`)
             .then((response) => {
-                roles.value = response.data.roles;
+                users.value = response.data;
             })
             .catch((e) => {
                 loading.value = false;
@@ -44,15 +56,26 @@ export default function useRoles() {
             });
     }
 
-    const getRole = async (id) => {
+    const getUser = async (id) => {
+
+    }
+
+    const deleteUsers = async () => {
 
     }
 
     return {
-        roles,
+        users,
+        user,
+        selectArray,
+        searchField,
+        searchValue,
+        headers,
         errors,
-        getRoles,
+        getUsers,
         isFinish,
+        getUser,
         cleanErrors,
+        deleteUsers,
     }
 }

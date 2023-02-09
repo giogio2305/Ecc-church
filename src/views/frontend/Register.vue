@@ -1,25 +1,31 @@
 <script setup>
 import { onMounted, reactive, ref } from 'vue';
+import RegisterSucess from '@/components/message/RegisterSucess.vue';
 import useRoles from '@/composables/useRoles';
 import useAuth from '@/composables/useAuth';
 import { EyeIcon, EyeSlashIcon } from "@heroicons/vue/24/solid"
 
 const showPassword = ref(false);
 const { getRoles, roles, } = useRoles();
-const { errors, loading } = useAuth();
+const { errors, loading, createUser, isFinish, cleanErrors, } = useAuth();
 const user = reactive({
     username: '',
     lastname: '',
     email: '',
     password: '',
-    parishOfficial: 0,
-    role: 1
+    parishOfficial: false,
+    role: 1,
+    confirmed: false,
+    blocked: true,
 })
 
 onMounted(async () => {
     await getRoles();
 });
 
+const register = async () => {
+    await createUser({...user});
+}
 
 </script>
 
@@ -33,7 +39,9 @@ onMounted(async () => {
             </div>
 
             <div class="flex flex-col items-center justify-center p-3 w-full max-w-xl bg-white shadow-md rounded-lg my-8">
-                <form class="flex flex-col w-full py-3 px-4">
+                <Error :errors="errors" @cleanErrors="cleanErrors" />
+                <RegisterSucess v-if="isFinish" />
+                <form v-else class="flex flex-col w-full py-3 px-4" @submit.prevent="register()">
                     <div class="w-full">
                         <label class="">Type de profil</label>
                         <select v-model="user.role" class="form-select p-2 outline-none mt-1 border block border-gray-300 rounded-lg shadow-sm w-full">
@@ -59,15 +67,15 @@ onMounted(async () => {
                     <div class="w-full mt-3" v-if="user.role == 1">
                         <label class="">Chargé paroissial</label>
                         <div class=" flex mt-1 items-center space-x-2">
-                            <input type="radio" class="form-radio border-gray-300" id="yes" v-model="user.parishOfficial" :value="{number: 1}">
+                            <input type="radio" class="form-radio border-gray-300" id="yes" v-model="user.parishOfficial" :value="true">
                             <label for="yes">Oui</label>
-                            <input type="radio" class="form-radio border-gray-300" id="no" v-model="user.parishOfficial"  :value="{number: false}">
+                            <input type="radio" class="form-radio border-gray-300" id="no" v-model="user.parishOfficial"  :value="false">
                             <label for="no">Non</label>
                         </div>
                     </div>
                     <div class="w-full mt-3">
                         <label class="">Adresse mail</label>
-                        <input v-model="user.email" class="border-gray-300 border form-input p-2 mt-1 outline-none block rounded-lg shadow-sm w-full" type="text" placeholder="Ex: nom@xyz.com"/>
+                        <input v-model="user.email" class="border-gray-300 border form-input p-2 mt-1 outline-none block rounded-lg shadow-sm w-full" type="email" placeholder="Ex: nom@xyz.com"/>
                     </div>
                     <div class="w-full mt-3">
                         <label class="">Mot de passe</label>
@@ -79,7 +87,10 @@ onMounted(async () => {
                             </span>
                         </div>
                     </div>
-                    <input class="p-2 mt-8 rounded-lg bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold cursor-pointer" type="submit" value="S'inscrire"/>
+                    <button type="submit" :disabled="loading" class="p-2 mt-8 rounded-lg bg-gradient-to-r from-blue-500 to-blue-600 disabled:bg-blue-300 text-white font-semibold cursor-pointer flex items-center justify-center">
+                        <Spin v-if="loading" />
+                        <span v-else>S'inscrire</span>
+                    </button>
                     <p class=" mt-4 text-sm text-center ">Déjà un compte ? <router-link :to="{name:'login'}" class="text-blue-500 hover:underline">Connectez vous</router-link> </p>
                 </form>
             </div>

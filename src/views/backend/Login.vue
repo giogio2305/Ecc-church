@@ -9,26 +9,38 @@ const showPassword = ref(false);
 const router = useRouter();
 const route = useRoute();
 const auth = useAuthenticateStore();
-const { errors, loading, loginUser, isFinish, cleanErrors, } = useAuth();
-
+const { errors, loading, loginAdmin, isFinish, cleanErrors, } = useAuth();
 
 const user = reactive({
     identifier: "",
     password: "",
 });
 
+onMounted(async () => {
+    if (auth.user != null && auth.tokenUser != null) {
+        router.replace({ name: "admin.dashboard" });
+    }
+    console.log(auth.tokenUser );
+    if (route.query.errors) {
+        errors.value.push("Your not a administrator");
+    }
+});
+
 const login = async () => {
-    await loginUser({...user});
+    await loginAdmin({...user});
+    if(errors.value.length == 0){
+        location.href = '/admin'
+    }
 }
 </script>
 <template>
     <div class=" w-full   bg-slate-100 relative">
-        <div class="w-full h-full  bg-[url('../assets/abt.jpg')] bg-cover bg-center ">
+        <div class="w-full h-full   bg-cover bg-center ">
 
-            <div class="bg-black/50 z-10 w-full min-h-[80vh]  flex flex-col items-center justify-center px-4 py-20">
+            <div class="bg-black/50 z-10 w-full min-h-screen  flex flex-col items-center justify-center px-4 py-20">
         <div class="text-center">
-            <h1 class="font-bold lg:text-3xl text-2xl text-white">Connectez-vous à votre compte</h1>
-            <h3 class="flex flex-col items-center text-white text-base my-1">Ou <router-link :to="{name:'register'}" class="text-blue-500 ml-2 hover:underline">Inscrivez vous et rejoignez la communauté.</router-link></h3>
+            <h1 class="font-bold lg:text-3xl text-2xl text-white">ECC Church Admin Panel</h1>
+            <h3 class="flex flex-col items-center text-white text-base my-1">Entrez vos identifiants pour acceder au panneau d'administration</h3>
         </div>
 
     <div class="flex flex-col items-center justify-center p-3 w-full max-w-xl bg-white shadow-md rounded-lg my-8">

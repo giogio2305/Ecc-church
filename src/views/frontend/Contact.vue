@@ -1,8 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import SiteNavigation from '../../components/SiteNavigation.vue';
-import Footer from '../../components/Footer.vue';
-import HeadBanner from '../../components/HeadBanner.vue';
+import HeadBanner from '@/components/HeadBanner.vue';
 import { ref } from "vue";
 const titre = ref("Contactez-nous !");
 </script>
