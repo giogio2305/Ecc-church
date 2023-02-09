@@ -113,6 +113,24 @@ const router = createRouter({
       }
     },
     {
+      path: '/profil',
+      name: 'profil',
+      components: {
+        default: () => import('../views/backend/Profil.vue'),
+        header: Header,
+        footer: Footer,
+      }
+    },
+    {
+      path: '/editprofil',
+      name: 'editprofil',
+      components: {
+        default: () => import('../views/backend/Editprofile.vue'),
+        header: Header,
+        footer: Footer,
+      }
+    },
+    {
       path: '/login',
       name: 'login',
       components: {
