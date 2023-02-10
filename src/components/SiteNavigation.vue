@@ -23,7 +23,7 @@ let open = reactive({
           <div class="lg:h-14 h-12 ">
               <img src="../assets/LOGO.png" class="w-full h-full object-cover"/> 
           </div>
-          <h1 class="font-bold xl:text-xl text-sm  text-gray-800">Eglise du Christianisme celeste</h1>
+          <h1 class="font-bold xl:text-xl text-sm  text-gray-800">Eglise du Christianisme Céleste</h1>
         </router-link>
       </div>
 
@@ -76,7 +76,7 @@ let open = reactive({
              </span>
           </div>
           <div class="absolute z-20 hidden bg-white w-52 shadow top-full left-0 rounded-b-lg text-base  group-hover:block">
-                  <a href="#" class="hover:text-white hover:bg-red-500 px-4 py-2  font-semibold block">Fidèle</a>
+                  <a href="/profils/fideles" class="hover:text-white hover:bg-red-500 px-4 py-2  font-semibold block">Fidèle</a>
                   <a href="#" class="hover:text-white hover:bg-red-500 px-4 py-2  font-semibold block">Chargé Paroissial</a>
                   <a href="#" class="hover:text-white hover:bg-red-500 px-4 py-2  font-semibold block">Groupe de Prière</a>
                   <a href="#" class="hover:text-white hover:bg-red-500 px-4 py-2  font-semibold block">Diocèse</a>

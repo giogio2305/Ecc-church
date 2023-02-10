@@ -20,8 +20,8 @@ polyfillCountryFlagEmojis();
             <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
           </svg>
 
-          <input class="w-[88%] p-2 outline-none text-zinc-800 font-medium" type="text" placeholder="Chercher un cantique réligieux"/>
-          <select class="outline-none p-3 w-[10%] font-semibold text-zinc-800">
+          <input class="w-[88%] p-2 border-0 outline-none text-zinc-800 font-medium" type="text" placeholder="Chercher un cantique réligieux"/>
+          <select class="border-0 outline-none p-3 w-[10%] font-semibold text-zinc-800">
             <option disabled="disabled" selected>Type</option>
             <option>Cantique</option>
             <option>Louange</option>
@@ -44,11 +44,11 @@ polyfillCountryFlagEmojis();
         </div>
 
         <div class="flex flex-col items-center min-w-[108px] min-h-[54px] p-1.5 ml-6 rounded-lg shadow bg-white">
-          <input type="text" placeholder="Ref. livret Nigéria  &#127475;&#127468;" class="outline-none p-2 text-md font-semibold"/>
+          <input type="text" placeholder="Ref. livret Nigéria  &#127475;&#127468;" class="border-0 outline-none p-2 text-md font-semibold"/>
         </div>
 
         <div class="flex flex-col items-center min-w-[108px] min-h-[54px] p-1.5 ml-6 rounded-lg shadow bg-white">
-          <input type="text" placeholder="Ref. livret Bénin &#127463;&#127471;" class="outline-none p-2 text-md font-semibold"/>
+          <input type="text" placeholder="Ref. livret Bénin &#127463;&#127471;" class="border-0 outline-none p-2 text-md font-semibold"/>
         </div>
 
       </div>

@@ -165,6 +165,18 @@ const router = createRouter({
       },
     },
     {
+      path: '/profils/fideles',
+      name: 'fideles',
+      components: {
+        default: () => import('@/views/frontend/Fidele.vue'),
+        header: Header,
+        footer: Footer,
+      },
+      meta: {
+        title: SITE_NAME + " - Fidèles",
+      },
+    },
+    {
       path: '/login',
       name: 'login',
       components: {
@@ -195,7 +207,10 @@ const router = createRouter({
         default: () => import('@/views/frontend/Profil.vue'),
         header: Header,
         footer: Footer,
-      }
+      },
+      meta: {
+        title: SITE_NAME + " - Profil",
+      },
     },
     {
       path: '/editprofil',
@@ -204,7 +219,10 @@ const router = createRouter({
         default: () => import('@/views/frontend/Editprofile.vue'),
         header: Header,
         footer: Footer,
-      }
+      },
+      meta: {
+        title: SITE_NAME + " - Edit profil",
+      },
     },
     {
       path: "/:pathMatch(.*)",

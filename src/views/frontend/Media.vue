@@ -16,8 +16,8 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
 </svg>
 
-<input class="w-[88%] p-2 outline-none text-zinc-800 font-medium" type="text" placeholder="Chercher une vidéo ou un audio"/>
-<select class="outline-none p-3 w-[10%] font-semibold text-zinc-800">
+<input class="w-[88%] p-2 border-0 outline-none text-zinc-800 font-medium" type="text" placeholder="Chercher une vidéo ou un audio"/>
+<select class="border-0 outline-none p-3 w-[10%] font-semibold text-zinc-800">
   <option selected>Vidéos</option>
   <option>Audios</option>
 </select>
