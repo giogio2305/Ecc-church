@@ -3,90 +3,90 @@ import CarteFidele from "@/components/CarteFidele.vue"
 
 const data = [
     {
-        name: 'Sigha',
-        surname: 'Marc',
-        email: 'marcsigha@gmail.com',
+        name: 'Agoons',
+        surname: 'Kenemi',
+        email: 'kenagoons@gmail.com',
         country: 'Cameroun',
-        city: 'Douala',
+        city: 'Yaoundé',
         sex: 'Homme',
         ministry: 'Prédicateur'
     },
     {
-        name: 'Mbakop',
-        surname: 'Alfred',
-        email: 'mbakopal@gmail.com',
-        country: 'Cameroun',
-        city: 'Douala',
+        name: 'Asante',
+        surname: 'Kwaku',
+        email: 'asantek@gmail.com',
+        country: 'Nigéria',
+        city: 'Lagos',
         sex: 'Homme',
         ministry: 'Chorale'
     },
     {
-        name: 'Sigha',
-        surname: 'Marc',
-        email: 'marcsigha@gmail.com',
+        name: 'Ngwa',
+        surname: 'Cécile',
+        email: 'cécilengwa@gmail.com',
         country: 'Cameroun',
         city: 'Douala',
-        sex: 'Homme',
+        sex: 'Femme',
         ministry: 'Prédicateur'
     },
     {
-        name: 'Mbakop',
-        surname: 'Alfred',
-        email: 'mbakopal@gmail.com',
+        name: 'Fomen',
+        surname: 'Boris',
+        email: 'Borisfo@gmail.com',
         country: 'Cameroun',
-        city: 'Douala',
+        city: 'Bafoussam',
         sex: 'Homme',
         ministry: 'Chorale'
     },
     {
-        name: 'Sigha',
-        surname: 'Marc',
-        email: 'marcsigha@gmail.com',
-        country: 'Cameroun',
-        city: 'Douala',
+        name: 'Afé',
+        surname: 'Maxime',
+        email: 'maxafé@gmail.com',
+        country: 'Bénin',
+        city: 'Cotonou',
         sex: 'Homme',
         ministry: 'Prédicateur'
     },
     {
-        name: 'Mbakop',
-        surname: 'Alfred',
-        email: 'mbakopal@gmail.com',
-        country: 'Cameroun',
-        city: 'Douala',
+        name: 'Lefevre',
+        surname: 'Pierre',
+        email: 'lefrevepi32@gmail.com',
+        country: 'France',
+        city: 'Roissy',
         sex: 'Homme',
         ministry: 'Chorale'
     },
     {
-        name: 'Sigha',
-        surname: 'Marc',
-        email: 'marcsigha@gmail.com',
+        name: 'Etogo',
+        surname: 'Solange',
+        email: 'solangeetogo@gmail.com',
         country: 'Cameroun',
-        city: 'Douala',
-        sex: 'Homme',
+        city: 'Yaoundé',
+        sex: 'Femme',
         ministry: 'Prédicateur'
     },
     {
-        name: 'Mbakop',
-        surname: 'Alfred',
-        email: 'mbakopal@gmail.com',
-        country: 'Cameroun',
-        city: 'Douala',
+        name: 'Obafémi',
+        surname: 'Wayatt',
+        email: 'obafway24@gmail.com',
+        country: 'Nigéria',
+        city: 'Abuja',
         sex: 'Homme',
         ministry: 'Chorale'
     },
     {
-        name: 'Sigha',
-        surname: 'Marc',
-        email: 'marcsigha@gmail.com',
-        country: 'Cameroun',
-        city: 'Douala',
-        sex: 'Homme',
+        name: 'Picard',
+        surname: 'Jeanne',
+        email: 'picardjeanne@gmail.com',
+        country: 'France',
+        city: 'Paris',
+        sex: 'Femme',
         ministry: 'Prédicateur'
     },
     {
-        name: 'Mbakop',
+        name: 'Elame',
         surname: 'Alfred',
-        email: 'mbakopal@gmail.com',
+        email: 'Elameal@gmail.com',
         country: 'Cameroun',
         city: 'Douala',
         sex: 'Homme',
@@ -98,11 +98,11 @@ const data = [
 <template>
     <div class="w-full  min-h-screen bg-white overflow-x-hidden">
         <div class="w-full h-auto py-16 flex flex-col items-center justify-center">
-            <h1 class="font-semibold text-2xl md:text-4xl text-zinc-800 ">Découvrez nos Fidèles </h1>
+            <h1 class="font-semibold text-2xl md:text-4xl text-zinc-800 ">Découvrez nos Groupes de prières </h1>
             <p class="text-sm md:text-lg text-zinc-600 my-4 text-center w-2/3 md:w-1/3">Lorem ipsum dolor sit amet consectetur adipisicing elit. accusantium recusandae deserunt.</p>
             
             <div class="flex flex-col md:flex-row items-center justify-center w-full md:my-6 p-3">
-                <input class="w-full md:w-1/3 border-gray-300 mt-1 border form-input p-2 outline-none block rounded-lg shadow-sm" type="text" placeholder="Nom du fidèle"/>
+                <input class="w-full md:w-1/3 border-gray-300 mt-1 border form-input p-2 outline-none block rounded-lg shadow-sm" type="text" placeholder="Nom du Groupe"/>
                 <button class="flex items-center justify-center border-none mt-4 md:mt-1 h-10 w-36 md:w-12 md:ml-3 bg-gradient-to-r from-blue-600 to-blue-500 rounded-xl shadow">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="text-white w-6 h-6 mr-3 md:mr-0">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
@@ -146,7 +146,7 @@ const data = [
             
 
             <div class="w-full h-auto  bg-white shadow rounded-lg p-4 my-2">
-                <h1 class="font-semibold text-zinc-800 text-xl mb-3">Pays de résidence</h1>
+                <h1 class="font-semibold text-zinc-800 text-xl mb-3">Pays d'implantation</h1>
                 <div class="flex flex-col max-h-48 overflow-y-auto pl-1">
                         <div class="flex items-center">
                             <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="yes"  :value="true">
@@ -196,162 +196,86 @@ const data = [
             </div>
 
             <div class="w-full h-auto  bg-white shadow rounded-lg p-4 my-2">
-                <h1 class="font-semibold text-zinc-800 text-xl mb-3">Grade ECC</h1>
+                <h1 class="font-semibold text-zinc-800 text-xl mb-3">Année de création</h1>
                 <div class="flex flex-col max-h-48 overflow-y-auto pl-1">
                         <div class="flex items-center">
                             <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="yes"  :value="true">
-                            <label for="yes">Cameroun</label>
+                            <label for="yes">2010</label>
                         </div>
         
                         <div class="flex items-center">
                                 <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="no"   :value="false">
-                            <label for="no">Bénin</label>
+                            <label for="no">2008</label>
                         </div>
                         <div class="flex items-center">
                             <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="yes"  :value="true">
-                            <label for="yes">Nigéria</label>
+                            <label for="yes">2006</label>
                         </div>
         
                         <div class="flex items-center">
                                 <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="no"   :value="false">
-                            <label for="no">France</label>
+                            <label for="no">2000</label>
                         </div>
 
                         </div>
             </div>
 
             <div class="w-full h-auto  bg-white shadow rounded-lg p-4 my-2">
-                <h1 class="font-semibold text-zinc-800 text-xl mb-3">Fonction ECC</h1>
+                <h1 class="font-semibold text-zinc-800 text-xl mb-3">Dimension du lieu de prière</h1>
                 <div class="flex flex-col max-h-48 overflow-y-auto pl-1">
                         <div class="flex items-center">
                             <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="yes"  :value="true">
-                            <label for="yes">Pasteur</label>
+                            <label for="yes">0 - 50 m2</label>
                         </div>
         
                         <div class="flex items-center">
                                 <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="no"   :value="false">
-                            <label for="no">Membre du Trustee</label>
+                            <label for="no">50 - 100m2</label>
                         </div>
                         <div class="flex items-center">
                             <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="yes"  :value="true">
-                            <label for="yes">Chef de Diocèse</label>
+                            <label for="yes">100 - 200 m2</label>
                         </div>
         
                         <div class="flex items-center">
-                                <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="no"   :value="false">
-                            <label for="no">Chargé paroissial</label>
-                        </div>
-
-                        <div class="flex items-center">
-                            <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="yes"  :value="true">
-                            <label for="yes">Président du Comité</label>
-                        </div>
-        
-                        <div class="flex items-center">
-                                <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="no"   :value="false">
-                            <label for="no">Maitre de choeur</label>
-                        </div>
-                        <div class="flex items-center">
-                            <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="yes"  :value="true">
-                            <label for="yes">Chef des visonnaires</label>
-                        </div>
-        
-                        <div class="flex items-center">
-                                <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="no"   :value="false">
-                            <label for="no">Maman de Paroisse</label>
-                        </div>
-
-                        <div class="flex items-center">
-                            <input type="checkbox" checked class="form-checkbox border-gray-300 mr-2" id="yes"  :value="true">
-                            <label for="yes">Fidele</label>
+                                <input type="checkbox"  class="form-checkbox border-gray-300 mr-2" id="no"   :value="false">
+                            <label for="no">> 200 m2</label>
                         </div>
                         </div>
             </div>
 
             <div class="w-full h-auto  bg-white shadow rounded-lg p-4 my-2">
-                <h1 class="font-semibold text-zinc-800 text-xl mb-3">Ministere</h1>
+                <h1 class="font-semibold text-zinc-800 text-xl mb-3">Ordre de culte</h1>
                 <div class="flex flex-col max-h-48 overflow-y-auto pl-1">
                         <div class="flex items-center">
                             <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="yes"  :value="true">
-                            <label for="yes">Artiste Chantre</label>
+                            <label for="yes">Imeko</label>
                         </div>
         
                         <div class="flex items-center">
                                 <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="no"   :value="false">
-                            <label for="no">Chorale</label>
-                        </div>
-                        <div class="flex items-center">
-                            <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="yes"  :value="true">
-                            <label for="yes">Cours biblique</label>
-                        </div>
-        
-                        <div class="flex items-center">
-                                <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="no"   :value="false">
-                            <label for="no">Chargé paroissial</label>
-                        </div>
-
-                        <div class="flex items-center">
-                            <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="yes"  :value="true">
-                            <label for="yes">Déchaussé</label>
-                        </div>
-        
-                        <div class="flex items-center">
-                                <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="no"   :value="false">
-                            <label for="no">Evangelisation</label>
-                        </div>
-                        <div class="flex items-center">
-                            <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="yes"  :value="true">
-                            <label for="yes">Fidele</label>
-                        </div>
-        
-                        <div class="flex items-center">
-                                <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="no"   :value="false">
-                            <label for="no">Formateur liturgique</label>
-                        </div>
-
-                        <div class="flex items-center">
-                            <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="yes"  :value="true">
-                            <label for="yes">Prophete</label>
-                        </div>
-
-                        <div class="flex items-center">
-                                <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="no"   :value="false">
-                            <label for="no">Sacristain</label>
-                        </div>
-
-                        <div class="flex items-center">
-                            <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="yes"  :value="true">
-                            <label for="yes">Sécrétariat</label>
-                        </div>
-                        <div class="flex items-center">
-                                <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="no"   :value="false">
-                            <label for="no">Visonnaire</label>
-                        </div>
-
-                        <div class="flex items-center">
-                            <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="yes"  :value="true">
-                            <label for="yes">Autre</label>
+                            <label for="no">Porto-Novo</label>
                         </div>
                         </div>
             </div>
 
             <div class="w-full h-auto bg-white shadow rounded-lg p-4 my-2">
-                <h1 class="font-semibold text-zinc-800 text-xl mb-3">Dispenser cours bibliques</h1>
+                <h1 class="font-semibold text-zinc-800 text-xl mb-3">Nombre de fidèles</h1>
                 <div class="flex flex-col">
                         <div class="flex items-center">
                             <input type="radio" class="form-radio border-gray-300 mr-2" id="yes"  :value="true">
-                            <label for="yes">Oui</label>
+                            <label for="yes"> - 95</label>
                         </div>
         
                         <div class="flex items-center">
                                 <input type="radio" class="form-radio border-gray-300 mr-2" id="no"   :value="false">
-                            <label for="no">Non</label>
+                            <label for="no"> 95 + </label>
                             </div>
                         </div>
             </div>
 
             <div class="w-full h-auto bg-white shadow rounded-lg p-4 my-2">
-                <h1 class="font-semibold text-zinc-800 text-xl mb-3">Fidele de - de 3ans</h1>
+                <h1 class="font-semibold text-zinc-800 text-xl mb-3">Propose cours biblique</h1>
                 <div class="flex flex-col">
                         <div class="flex items-center">
                             <input type="radio" class="form-radio border-gray-300 mr-2" id="yes"  :value="true">
@@ -365,15 +289,12 @@ const data = [
                         </div>
             </div>
         </div>
-
-        <!-- block des cartes de fideles -->
         <div class="w-full grid grid-cols-1  md:grid-cols-3 gap-3 md:gap-6">
 
              
             <CarteFidele v-for="d,index in data" :key="index" :data="d" />
 
         </div>
-
         </div>
     </div>
 </template>

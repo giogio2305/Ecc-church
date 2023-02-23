@@ -77,10 +77,10 @@ let open = reactive({
           </div>
           <div class="absolute z-20 hidden bg-white w-52 shadow top-full left-0 rounded-b-lg text-base  group-hover:block">
                   <a href="/profils/fideles" class="hover:text-white hover:bg-red-500 px-4 py-2  font-semibold block">Fidèle</a>
-                  <a href="#" class="hover:text-white hover:bg-red-500 px-4 py-2  font-semibold block">Chargé Paroissial</a>
-                  <a href="#" class="hover:text-white hover:bg-red-500 px-4 py-2  font-semibold block">Groupe de Prière</a>
-                  <a href="#" class="hover:text-white hover:bg-red-500 px-4 py-2  font-semibold block">Diocèse</a>
-                  <a href="#" class="hover:text-white hover:bg-red-500 px-4 py-2 rounded-b-lg  font-semibold block">Siège</a>
+                  <a href="/profils/charge_paroissial" class="hover:text-white hover:bg-red-500 px-4 py-2  font-semibold block">Chargé Paroissial</a>
+                  <a href="/profils/GDP" class="hover:text-white hover:bg-red-500 px-4 py-2  font-semibold block">Groupe de Prière</a>
+                  <a href="/profils/dioceses" class="hover:text-white hover:bg-red-500 px-4 py-2  font-semibold block">Diocèse</a>
+                  <a href="/profils/sieges" class="hover:text-white hover:bg-red-500 px-4 py-2 rounded-b-lg  font-semibold block">Siège</a>
           </div>
         </li>
         <li class="py-4"><router-link :to="{name:'paroisses'}" class="cursor-pointer p-2 rounded-lg text-left font-semibold text-gray-500 hover:bg-red-500 hover:text-white">Paroisses</router-link></li>

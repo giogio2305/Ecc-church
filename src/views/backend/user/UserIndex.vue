@@ -1,5 +1,4 @@
 <template>
-    <DialogsWrapper />
    <div class="flex w-full min-h-screen bg-white p-8 ">
         <div class="overflow-y-auto flex flex-col w-full max-h-screen  p-2  bg-white">
             <h1 class="text-3xl font-bold">Users</h1>
@@ -50,6 +49,19 @@
                         />
                     </div>
                 </div>
+                <div class="mt-1 flex justify-end lg:mt-0 lg:block">
+                    <button
+                        type="button"
+                        title="supprimer"
+                        @click="deleteUsers"
+                        class="flex items-center justify-between space-x-2 rounded border border-red-500 p-2 text-red-500 hover:bg-red-500 hover:text-white"
+                    >
+                        <TrashIcon class="h-6 w-6" />
+                        <span class="hidden text-sm font-thin lg:block"
+                            >Supprimer</span
+                        >
+                    </button>
+                </div>
             </div>
             <Error :errors="errors" @cleanErrors="cleanErrors" />
              <EasyDataTable
@@ -71,30 +83,31 @@
                         class="h-12 w-12 rounded-full object-cover"
                     />
                     <UserCircleIcon v-else class="h-12 w-12 text-gray-700" />
-                </template> -->
+                </template>
                 <template #item-confirmed="item">
                     <span
                         v-if="item.confirmed == true"
-                        class="rounded-full bg-green-500 px-2 py-1 text-white"
+                        class="rounded-full bg-green-500 p-2 text-white"
                         >Actived</span
                     >
-                    <span v-else class="rounded-full bg-red-500 px-2 py-1 text-white"
+                    <span v-else class="rounded-full bg-red-500 p-2 text-white"
                         >Desactived</span
                     >
-                </template>   
+                </template>   -->
                 <template #item-id="item">
-                    <div class="py-4">
+                    <div>
                         <router-link
                             :to="{
                                 name: 'admin.user.index',
+                                params: { slug: item.id },
                             }"
-                            class="text-green-500 hover:underline"
+                            class="text-adna-green hover:underline"
                             >Edit</router-link
                         >
                         <button
                             type="button"
-                            v-if="item.confirmed == true"
-                            @click="toogleConfirmed(item.id, false)"
+                            v-if="item.status == 1"
+                            @click="toogleStatus(2, item.id)"
                             class="ml-3 text-purple-600 hover:underline"
                         >
                             Desactived
@@ -102,17 +115,10 @@
                         <button
                             type="button"
                             v-else
-                            @click="toogleConfirmed(item.id, true)"
+                            @click="toogleStatus(1, item.id)"
                             class="ml-3 text-purple-600 hover:underline"
                         >
                             Actived
-                        </button>
-                        <button
-                            type="button"
-                            @click="deleteUser(item.id)"
-                            class="ml-3 text-red-600 hover:underline"
-                        >
-                            Delete
                         </button>
                     </div>
                 </template>
@@ -136,14 +142,14 @@ const {
     getUsers,
     searchField,
     searchValue,
-    toogleConfirmed,
+    toogleStatus,
     headers,
     users,
     loading,
     errors,
     cleanErrors,
     selectArray,
-    deleteUser,
+    deleteUsers,
 } = useUser();
 
 onMounted(async function () { 

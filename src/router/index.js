@@ -177,6 +177,54 @@ const router = createRouter({
       },
     },
     {
+      path: '/profils/charge_paroissial',
+      name: 'charge_paroissial',
+      components: {
+        default: () => import('@/views/frontend/ChargePar.vue'),
+        header: Header,
+        footer: Footer,
+      },
+      meta: {
+        title: SITE_NAME + " - Chargés paroissiaux",
+      },
+    },
+    {
+      path: '/profils/GDP',
+      name: 'GDP',
+      components: {
+        default: () => import('@/views/frontend/Gdp.vue'),
+        header: Header,
+        footer: Footer,
+      },
+      meta: {
+        title: SITE_NAME + " - Groupes de prières",
+      },
+    },
+    {
+      path: '/profils/dioceses',
+      name: 'dioceses',
+      components: {
+        default: () => import('@/views/frontend/Diocese.vue'),
+        header: Header,
+        footer: Footer,
+      },
+      meta: {
+        title: SITE_NAME + " - Diocèses",
+      },
+    },
+    {
+      path: '/profils/sieges',
+      name: 'sieges',
+      components: {
+        default: () => import('@/views/frontend/Siege.vue'),
+        header: Header,
+        footer: Footer,
+      },
+      meta: {
+        title: SITE_NAME + " - Sièges",
+      },
+    },
+    {
       path: '/login',
       name: 'login',
       components: {
