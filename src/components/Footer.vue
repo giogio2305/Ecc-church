@@ -5,7 +5,7 @@
            
             <div class="flex flex-col w-full my-8 md:my-0 md:w-[calc(100%/4)]">
                 <h3 class="font-bold text-2xl text-white">À propos d'Ecc</h3>
-                <p class="text-base text-slate-200 my-4">Ecc Church Wordpress Theme est conçu par des professionnels pour les églises à but non lucratif, les églises modernes, les groupes de prière, les chrétiens, les organisations caritatives, les organisations à but non lucratif. Saisissez-le bientôt!</p>
+                <p class="text-base text-slate-200 my-4">Ecc Church est conçu par des professionnels pour les églises à but non lucratif, les églises modernes, les groupes de prière, les chrétiens, les organisations caritatives, les organisations à but non lucratif. Saisissez-le bientôt!</p>
                 <div class="flex items-center justify-start my-3">
                     <div class="h-10 w-10 bg-slate-600 rounded-md mx-1"></div>
                     <div class="h-10 w-10 bg-slate-600 rounded-md mx-1"></div>
