@@ -1,6 +1,7 @@
 <script setup>
 import CarteFidele from "@/components/CarteFidele.vue"
-
+import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
+import { ChevronUpIcon } from '@heroicons/vue/20/solid'
 const data = [
     {
         name: 'Sigha',
@@ -119,36 +120,51 @@ const data = [
                     </svg>
                     <p class="font-semibold text-zinc-800 text-lg">Filtres</p>
             </div>
-        <div class="max-w-screen-xl  mx-auto  flex items-start justify-center  pt-3 pb-12 px-4">
+        <div class="max-w-screen-xl  mx-auto  flex items-start justify-center  pt-3 pb-12 px-2">
 
-        <div class="hidden md:visible w-80 h-auto mr-5 md:flex flex-col">
-            <div class="flex items-center justify-center bg-white shadow rounded-2xl min-w-28 h-10 py-1.5 px-4  cursor-pointer">
+        <div class="hidden md:visible w-1/5 h-auto mr-5 md:flex flex-col">
+            <div class="flex items-center justify-center mb-6 bg-white shadow rounded-2xl min-w-28 h-10 py-1.5 px-4  cursor-pointer">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-3">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 01-.659 1.591l-5.432 5.432a2.25 2.25 0 00-.659 1.591v2.927a2.25 2.25 0 01-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 00-.659-1.591L3.659 7.409A2.25 2.25 0 013 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0112 3z" />
                     </svg>
                     <p class="font-semibold text-zinc-800 text-lg">Filtres</p>
             </div>
 
-            <div class="w-full h-auto bg-white shadow rounded-lg p-4 my-2">
-                <h1 class="font-semibold text-zinc-800 text-xl mb-3">Continent</h1>
-                <div class="flex flex-col">
-                        <div class="flex items-center">
-                            <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="yes"  :value="true">
-                            <label for="yes">Afrique</label>
-                        </div>
-        
-                        <div class="flex items-center">
-                                <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="no"   :value="false">
-                            <label for="no">Europe</label>
-                            </div>
-                        </div>
-            </div>
-            
+                <Disclosure v-slot="{ open }">
+                <DisclosureButton
+                class="flex w-full justify-between rounded-lg bg-white shadow px-4 py-2 text-left text-sm font-medium text-blue-900 hover:bg-blue-50 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-75"
+                >
+                <span>Continent</span>
+                <ChevronUpIcon
+                    :class="open ? 'rotate-180 transform' : ''"
+                    class="h-5 w-5 text-blue-800"
+                />
+                </DisclosureButton>
+                <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-500">
+                    <div class="flex items-center">
+                                    <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="yes"  :value="true">
+                                    <label for="yes">Afrique</label>
+                                </div>
+                
+                                <div class="flex items-center">
+                                        <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="no"   :value="false">
+                                    <label for="no">Europe</label>
+                                </div>
+                </DisclosurePanel>
+                </Disclosure>
 
-            <div class="w-full h-auto  bg-white shadow rounded-lg p-4 my-2">
-                <h1 class="font-semibold text-zinc-800 text-xl mb-3">Pays de résidence</h1>
-                <div class="flex flex-col max-h-48 overflow-y-auto pl-1">
-                        <div class="flex items-center">
+                <Disclosure v-slot="{ open }" as="div" class="mt-2">
+        <DisclosureButton
+          class="flex w-full justify-between rounded-lg bg-white shadow px-4 py-2 text-left text-sm font-medium text-blue-900 hover:bg-blue-50 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-75"
+        >
+          <span>Pays de résidence</span>
+          <ChevronUpIcon
+            :class="open ? 'rotate-180 transform' : ''"
+            class="h-5 w-5 text-blue-800"
+          />
+        </DisclosureButton>
+        <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-500">
+            <div class="flex items-center">
                             <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="yes"  :value="true">
                             <label for="yes">Cameroun</label>
                         </div>
@@ -157,23 +173,31 @@ const data = [
                                 <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="no"   :value="false">
                             <label for="no">Bénin</label>
                         </div>
+
                         <div class="flex items-center">
-                            <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="yes"  :value="true">
-                            <label for="yes">Nigéria</label>
+                                <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="no"   :value="false">
+                            <label for="no">Nigéria</label>
                         </div>
-        
+
                         <div class="flex items-center">
                                 <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="no"   :value="false">
                             <label for="no">France</label>
                         </div>
+        </DisclosurePanel>
+                </Disclosure>
 
-                        </div>
-            </div>
-
-            <div class="w-full h-auto  bg-white shadow rounded-lg p-4 my-2">
-                <h1 class="font-semibold text-zinc-800 text-xl mb-3">Ville</h1>
-                <div class="flex flex-col max-h-48 overflow-y-auto pl-1">
-                        <div class="flex items-center">
+                <Disclosure v-slot="{ open }" as="div" class="mt-2">
+        <DisclosureButton
+          class="flex w-full justify-between rounded-lg bg-white shadow px-4 py-2 text-left text-sm font-medium text-blue-900 hover:bg-blue-50 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-75"
+        >
+          <span>Ville</span>
+          <ChevronUpIcon
+            :class="open ? 'rotate-180 transform' : ''"
+            class="h-5 w-5 text-blue-800"
+          />
+        </DisclosureButton>
+        <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-500">
+            <div class="flex items-center">
                             <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="yes"  :value="true">
                             <label for="yes">Douala</label>
                         </div>
@@ -191,39 +215,49 @@ const data = [
                                 <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="no"   :value="false">
                             <label for="no">Roissy</label>
                         </div>
+        </DisclosurePanel>
+                </Disclosure>
 
-                        </div>
-            </div>
+                <Disclosure v-slot="{ open }" as="div" class="mt-2">
+        <DisclosureButton
+          class="flex w-full justify-between rounded-lg bg-white shadow px-4 py-2 text-left text-sm font-medium text-blue-900 hover:bg-blue-50 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-75"
+        >
+          <span>Grade ECC</span>
+          <ChevronUpIcon
+            :class="open ? 'rotate-180 transform' : ''"
+            class="h-5 w-5 text-blue-800"
+          />
+        </DisclosureButton>
+        <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-500">
 
-            <div class="w-full h-auto  bg-white shadow rounded-lg p-4 my-2">
-                <h1 class="font-semibold text-zinc-800 text-xl mb-3">Grade ECC</h1>
-                <div class="flex flex-col max-h-48 overflow-y-auto pl-1">
-                        <div class="flex items-center">
-                            <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="yes"  :value="true">
-                            <label for="yes">Cameroun</label>
-                        </div>
-        
-                        <div class="flex items-center">
-                                <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="no"   :value="false">
-                            <label for="no">Bénin</label>
-                        </div>
-                        <div class="flex items-center">
-                            <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="yes"  :value="true">
-                            <label for="yes">Nigéria</label>
-                        </div>
-        
-                        <div class="flex items-center">
-                                <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="no"   :value="false">
-                            <label for="no">France</label>
-                        </div>
+        <div class="flex items-center">
+                <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="no"   :value="false">
+            <label for="no">Bénin</label>
+        </div>
+        <div class="flex items-center">
+            <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="yes"  :value="true">
+            <label for="yes">Nigéria</label>
+        </div>
 
-                        </div>
-            </div>
+        <div class="flex items-center">
+                <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="no"   :value="false">
+            <label for="no">France</label>
+        </div>
+        </DisclosurePanel>
+                </Disclosure>
 
-            <div class="w-full h-auto  bg-white shadow rounded-lg p-4 my-2">
-                <h1 class="font-semibold text-zinc-800 text-xl mb-3">Fonction ECC</h1>
-                <div class="flex flex-col max-h-48 overflow-y-auto pl-1">
-                        <div class="flex items-center">
+                <Disclosure v-slot="{ open }" as="div" class="mt-2">
+        <DisclosureButton
+          class="flex w-full justify-between rounded-lg bg-white shadow px-4 py-2 text-left text-sm font-medium text-blue-900 hover:bg-blue-50 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-75"
+        >
+          <span>Fonction ECC</span>
+          <ChevronUpIcon
+            :class="open ? 'rotate-180 transform' : ''"
+            class="h-5 w-5 text-blue-800"
+          />
+        </DisclosureButton>
+        <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-500">
+            <div class="flex items-center">
                             <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="yes"  :value="true">
                             <label for="yes">Pasteur</label>
                         </div>
@@ -265,13 +299,21 @@ const data = [
                             <input type="checkbox" checked class="form-checkbox border-gray-300 mr-2" id="yes"  :value="true">
                             <label for="yes">Fidele</label>
                         </div>
-                        </div>
-            </div>
+        </DisclosurePanel>
+                </Disclosure>
 
-            <div class="w-full h-auto  bg-white shadow rounded-lg p-4 my-2">
-                <h1 class="font-semibold text-zinc-800 text-xl mb-3">Ministere</h1>
-                <div class="flex flex-col max-h-48 overflow-y-auto pl-1">
-                        <div class="flex items-center">
+                <Disclosure v-slot="{ open }" as="div" class="mt-2">
+        <DisclosureButton
+          class="flex w-full justify-between rounded-lg bg-white shadow px-4 py-2 text-left text-sm font-medium text-blue-900 hover:bg-blue-50 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-75"
+        >
+          <span>Ministere</span>
+          <ChevronUpIcon
+            :class="open ? 'rotate-180 transform' : ''"
+            class="h-5 w-5 text-blue-800"
+          />
+        </DisclosureButton>
+        <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-500">
+            <div class="flex items-center">
                             <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="yes"  :value="true">
                             <label for="yes">Artiste Chantre</label>
                         </div>
@@ -332,13 +374,21 @@ const data = [
                             <input type="checkbox" class="form-checkbox border-gray-300 mr-2" id="yes"  :value="true">
                             <label for="yes">Autre</label>
                         </div>
-                        </div>
-            </div>
-
-            <div class="w-full h-auto bg-white shadow rounded-lg p-4 my-2">
-                <h1 class="font-semibold text-zinc-800 text-xl mb-3">Dispenser cours bibliques</h1>
-                <div class="flex flex-col">
-                        <div class="flex items-center">
+        </DisclosurePanel>
+                </Disclosure>
+            
+                <Disclosure v-slot="{ open }" as="div" class="mt-2">
+        <DisclosureButton
+          class="flex w-full justify-between rounded-lg bg-white shadow px-4 py-2 text-left text-sm font-medium text-blue-900 hover:bg-blue-50 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-75"
+        >
+          <span>Dispenser cours bibliques</span>
+          <ChevronUpIcon
+            :class="open ? 'rotate-180 transform' : ''"
+            class="h-5 w-5 text-blue-800"
+          />
+        </DisclosureButton>
+        <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-500">
+            <div class="flex items-center">
                             <input type="radio" class="form-radio border-gray-300 mr-2" id="yes"  :value="true">
                             <label for="yes">Oui</label>
                         </div>
@@ -347,13 +397,21 @@ const data = [
                                 <input type="radio" class="form-radio border-gray-300 mr-2" id="no"   :value="false">
                             <label for="no">Non</label>
                             </div>
-                        </div>
-            </div>
+        </DisclosurePanel>
+                </Disclosure>
 
-            <div class="w-full h-auto bg-white shadow rounded-lg p-4 my-2">
-                <h1 class="font-semibold text-zinc-800 text-xl mb-3">Fidele de - de 3ans</h1>
-                <div class="flex flex-col">
-                        <div class="flex items-center">
+                <Disclosure v-slot="{ open }" as="div" class="mt-2">
+        <DisclosureButton
+          class="flex w-full justify-between rounded-lg bg-white shadow px-4 py-2 text-left text-sm font-medium text-blue-900 hover:bg-blue-50 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-75"
+        >
+          <span>Fidele de - de 3ans</span>
+          <ChevronUpIcon
+            :class="open ? 'rotate-180 transform' : ''"
+            class="h-5 w-5 text-blue-800"
+          />
+        </DisclosureButton>
+        <DisclosurePanel class="px-4 pt-4 pb-2 text-sm text-gray-500">
+            <div class="flex items-center">
                             <input type="radio" class="form-radio border-gray-300 mr-2" id="yes"  :value="true">
                             <label for="yes">Oui</label>
                         </div>
@@ -362,8 +420,8 @@ const data = [
                                 <input type="radio" class="form-radio border-gray-300 mr-2" id="no"   :value="false">
                             <label for="no">Non</label>
                             </div>
-                        </div>
-            </div>
+        </DisclosurePanel>
+                </Disclosure>
         </div>
 
         <!-- block des cartes de fideles -->

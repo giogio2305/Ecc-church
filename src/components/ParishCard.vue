@@ -1,3 +1,8 @@
+<script setup>
+const props = defineProps ({
+    data: Object
+})
+</script>
 <template>
             <div class="w-full flex flex-col items-start justify-start p-3 cursor-pointer rounded-lg shadow  hover:shadow-md transition-all ease-in-out delay-200">
             <div class="w-80 h-48 bg-slate-600 rounded-md mb-5"></div>
@@ -12,8 +17,3 @@
             </div>
             </div>
 </template>
-<script setup>
-const props = defineProps ({
-    data: Object
-})
-</script>

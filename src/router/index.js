@@ -93,15 +93,27 @@ const router = createRouter({
       },
     },
     {
-      path: '/article',
-      name: 'article',
+      path: '/Messages',
+      name: 'messages',
       components: {
-        default:() => import('@/views/frontend/Article.vue'),
+        default:() => import('@/views/frontend/Articles.vue'),
         header: Header,
         footer: Footer,
       },
       meta: {
-        title: SITE_NAME + " - Article",
+        title: SITE_NAME + " - Messages",
+      },
+    },
+    {
+      path: '/annonces',
+      name: 'annonces',
+      components: {
+        default:() => import('@/views/frontend/Annonces.vue'),
+        header: Header,
+        footer: Footer,
+      },
+      meta: {
+        title: SITE_NAME + " - Annonces",
       },
     },
     {
@@ -114,6 +126,18 @@ const router = createRouter({
       },
       meta: {
         title: SITE_NAME + " - Library",
+      },
+    },
+    {
+      path: '/formation',
+      name: 'formation',
+      components: {
+        default:() => import('@/views/frontend/Formations.vue'),
+        header: Header,
+        footer: Footer,
+      },
+      meta: {
+        title: SITE_NAME + " - Formations",
       },
     },
     {
@@ -141,15 +165,15 @@ const router = createRouter({
       },
     },
     {
-      path: '/calendrier',
-      name: 'calendrier',
+      path: '/evenements',
+      name: 'evenements',
       components: {
         default: () => import('@/views/frontend/Calendar.vue'),
         header: Header,
         footer: Footer,
       },
       meta: {
-        title: SITE_NAME + " - Calendar",
+        title: SITE_NAME + " - Evenements",
       },
     },
     {
